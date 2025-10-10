@@ -1,0 +1,251 @@
+# I added this then later decided to remove it.
+
+"Base Builders Backpack":
+  description: "A backpack meant to store supplies for building bases."
+  size: 4x4 # 16 total slots. Dandelion, Raspberry, Wood, Stone, Resin, Coins, QueenBee, LeatherScraps, BoneFragments, DeerHide, Feathers, Flint
+  unique: none
+  appearance:
+    Sleepbag: visible
+    BackpackStrapTop: visible
+    BackpackFlap: b68858
+    Pot: hidden
+    Teapot: bcbcbc
+    Knife: hidden
+    Pickaxe: bcbcbc
+    Knifesheath: hidden
+    ToolstrapBottom: bcbcbc
+    MetalclipLeft: hidden
+    PouchFront: b68858
+    PouchLeft: b68858
+    BackpackBody: b68858
+  crafting:
+    station: Forge
+    level: 1
+    costs:
+      LeatherScraps: 20
+      DeerHide: 20
+  valid items:
+    - BlackMetal
+    - BlackWood
+    - TrophySkeleton
+    - Ectoplasm
+    - YagluthDrop
+    - BlackCore
+    - BlackMarble
+    - Bronze
+    - BronzeNails
+    - ShieldCore
+    - Copper
+    - Chain
+    - Coal
+    - Carrot
+    - CelestialFeather
+    - CeramicPlate
+    - Dandelion
+    - DeerHide
+    - DragonTear
+    - Eitr
+    - ElderBark
+    - Tar
+    - FineWood
+    - Flint
+    - FlametalNew
+    - Feathers
+    - WolfPelt
+    - ProustitePowder
+    - Sulfur
+    - Iron
+    - IronNails
+    - LeatherScraps
+    - Obsidian
+    - QueenDrop
+    - QueenBee
+    - Resin
+    - RoundLog
+    - SurtlingCore
+    - Silver
+    - Stone
+    - SharpeningStone
+    - Sap
+    - DvergrNeedle
+    - MechanicalSpring
+    - Tin
+    - Thistle
+    - Thunderstone
+    - Turnip
+    - TrophyAsksvin
+    - Coins
+    - GoldIngot
+    - Wood
+    - YggdrasilWood
+    - BoneFragments
+    - Raspberry
+    - CharredCogwheel
+  upgrade:
+    1:
+      BjornHide: 10
+      Bronze: 1
+      TrollHide: 10
+      SurtlingCore: 5
+      size: 4x7 # 28 slots. 1 too few but oh well. Coal, Copper, Tin, Bronze, BronzeNails, Coal, FineWood, RoundLog, SurtlingCore, Thistle, Carrot, Ectoplasm, TrophySkeleton, Thunderstone, Coins, GoldIngot, BoneFragments
+    2:
+      Chain: 2
+      Ruby: 5
+      ElderBark: 25
+      Iron: 10
+      size: 5x7 #35 slots. Iron, IronNails, Turnip, Chain, ElderBark, SharpeningStone
+    3:
+      WolfPelt: 12
+      Obsidian: 20
+      WolfHairBundle: 10
+      Chitin: 5
+      size: 6x7 #43 slots. Silver, WolfPelt, Obsidian, DragonTear
+    4:
+      Tar: 15
+      LinenThread: 10
+      LoxPelt: 12
+      BlackMetal: 10
+      size: 7x7 #49 slots. BlackMetal, YagluthDrop, Tar, 
+    5:
+      ScaleHide: 15
+      Carapace: 10
+      BlackMarble: 25
+      BlackCore: 1
+      size: 7x8 #56 slots. BlackCore, BlackMarble, ShieldCore, CeramicPlate, Eitr, QueenDrop, DvergrNeedle, Sap, MechanicalSpring, YggdrasilWood
+    6:
+      AskHide: 10
+      MorgenSinew: 5
+      MoltenCore: 1
+      CharredBone: 25
+      size: 8x8 #64 slots. FlametalNew, BlackWood, CelestialFeather, ProustitePowder, Sulfur, TrophyAsksvin, CharredCogwheel
+  weight factor: 1
+  teleport: false
+  
+"Enchanters Backpack":
+  description: "A backpack meant to store supplies for building and upgrading the Enchantment Table."
+  size: 4x2 # 8 total slots.
+  unique: none
+  appearance:
+    Sleepbag: hidden
+    BackpackStrapTop: hidden
+    BackpackFlap: 5e4122
+    Pot: 9f00f3
+    Teapot: 9f00f3
+    Knife: hidden
+    Pickaxe: hidden
+    Knifesheath: hidden
+    ToolstrapBottom: hidden
+    MetalclipLeft: hidden
+    PouchFront: hidden
+    PouchLeft: hidden
+    BackpackBody: 5e4122
+  crafting:
+    station: Forge
+    level: 1
+    costs:
+      DeerHide: 30
+      Flint: 20
+      Resin: 50
+      DustUncommon: 10
+  valid items:
+    - SurtlingTrophy
+    - ForestToken
+    - IronBountyToken
+    - Coins
+    - Copper
+    - Iron
+    - Silver
+    - BlackMetal
+    - Bronze
+    - Chitin
+    - ElderBark
+    - Resin
+    - TrophyMorgen
+    - TrophyFulingShaman
+    - TrophyStoneGolem
+    - TrophyLeech
+    - TrophySkeleton
+    - CelestialFeather
+    - ProustitePowder
+    - GiantBloodSack
+    - ShieldCore
+    - CeramicPlate
+    - MushroomSmokePuff
+    - MushroomYellow
+    - BlackCore
+    - YmirRemains
+    - MorgenHeart
+    - Crystal
+    - Ooze
+    - DragonTear
+    - FreezeGland
+    - Tar
+    - Guck
+    - TrophyAbomination
+    - SerpentScale
+    - DustMagic
+    - DustRare
+    - DustEpic
+    - DustMythic
+    - DustLegendary
+    - ShardMagic
+    - ShardRare
+    - ShardEpic
+    - ShardMythic
+    - ShardLegendary
+    - GreydwarfEye
+    - Dandelion
+    - FishRaw
+    - MushroomJotunPuffs
+    - Cloudberry
+    - Bilebag
+    - Obsidian
+    - Thunderstone
+    - Mandible
+    - Needle
+    - LinenThread
+    - YggdrasilWood
+    - BlackWood
+    - BoneFragments
+    - FlametalNew
+    - GoblinTotem
+  upgrade:
+    1:
+      BjornHide: 10
+      Ectoplasm: 1
+      BronzeNails: 10
+      DustUncommon: 10
+      size: 6x4 #24 slots.
+    2:
+      Guck: 10
+      Root: 10
+      TrophyWraith: 1
+      AmberPearl: 20
+      size: 7x5 #35 slots.
+    3:
+      WolfFang: 10
+      DragonTear: 10
+      WolfClaw: 5
+      Feathers: 50
+      size: 7x6 #43 slots.
+    4:
+      Flax: 50
+      Needle: 12
+      UndeadBjornRibcage: 2
+      SerpentScale: 10
+      size: 7x7 #49 slots
+    5:
+      MushroomMagecap: 15
+      QueenDrop: 1
+      BlueJute: 10
+      Wisp: 20
+      size: 7x8 #56 slots
+    6:
+      CharcoalResin: 25
+      CelestialFeather: 5
+      Flametal_New: 10
+      Pot_Shard_Green: 20
+      GemstoneRed: 1
+      size: 8x8 #64 slots
+  weight factor: 1
+  teleport: false
