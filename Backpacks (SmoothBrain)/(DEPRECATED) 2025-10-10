@@ -1,5 +1,25 @@
 # This is my old backpacks.yml. Turns out, many backpacks are kinda a pain to manage inventory with, so I removed them. But figured I'd save an archive of them because I spent like two days working on them lol
 
+# Bags Featured:
+# Reagent Pouch (Epic Loot) (enchanting materials)
+# Ammo Pouch (arrows, bolts, missiles, bombs)
+# Tackle Box (fishing pole, fishing hat, fishing bait)
+# Fishermans Haul (fish)
+# Tool Trove (pickaxes, axes, torches, hammer, hoe, cultivator, butcher knife, lantern, scythe)
+# Dangerous Duffel (weapons)
+# Mobile Armory (armor)
+# Brewmaster’s Bag (mead, mead bases)
+# Lunch Box (cooked food)
+# Herb Pouch (dandelion, berries, fiddlehead, thistle, mushrooms, sap, bog witch spices/reagents)
+# Harvester’s Haversack (all seeds, barley, carrot, turnip, onion, barley, flax, hoe, cultivator, scythe, harvest armor)
+# Lumberjack Pack (woods)
+# Summoner’s Reliquary (boss drops and summon items)
+# Ore Hoard (gemstones, ores, smelted metals, coal, nails)
+# Stoner’s Stash (stone, flint, thunderstone, chitin, obsidian, black marble, grausten)
+# Stylish Satchel (hildir's dresses/tunics/hats)
+# Collector’s Carryall (misc resources)
+# Hunter’s Trophy Bag (mob drops, raw meat, trophies)
+
 "Reagent Pouch":
   description: "Now with 30% more sparkle!"
   size: 6x1
@@ -127,6 +147,19 @@
     - BoltBlackmetal
     - BoltCarapace
     - BoltCharred
+    - BombBlob_PoisonElite
+    - BombBlob_PoisonElite
+    - TurretBoltWood
+    - TurretBoltFlametal
+    - TurretBolt
+    - BombOoze
+    - BombBile
+    - BombSmoke
+    - BombBlob_PoisonElite
+    - BombBlob_Poison
+    - BombBlob_Lava
+    - BombBlob_Tar
+    - BombBlob_Frost
   upgrade:
     1:
       ArrowBronze: 20
