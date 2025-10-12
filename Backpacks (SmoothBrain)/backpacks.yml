@@ -139,6 +139,72 @@
       RareDust: 12
   weight factor: 0.70
   teleport: false
+# ==================================================================================================
+
+"Tackle Box":
+  description: "Everything a fisherman needs, all in one place."
+  size: 8x8 #64
+  unique: none
+  appearance:
+    Sleepbag: hidden
+    BackpackStrapTop: hidden
+    BackpackFlap: hidden
+    Pot: hidden
+    Teapot: hidden
+    Knife: visible
+    Pickaxe: hidden
+    Knifesheath: hidden
+    ToolstrapBottom: hidden
+    MetalclipLeft: hidden
+    PouchFront: hidden
+    PouchLeft: hidden
+    BackpackBody: hidden
+  crafting:
+    station: Forge
+    level: 1
+    costs:
+      Bronze: 5
+      DeerHide: 2
+  valid items:
+    - FishingRod
+    - HelmetFishingHat
+    - FishingBait
+    - FishingBaitForest
+    - FishingBaitSwamp
+    - FishingBaitOcean
+    - FishingBaitCave
+    - FishingBaitPlains
+    - FishingBaitMistlands
+    - FishingBaitAshlands
+    - FishingBaitDeepNorth
+    - RoastedCrustPie
+    - ScorchingMedley
+    - FishAndBread
+    - SpicyMarmalade
+    - MushroomOmelette
+    - Salad
+    - BloodPudding
+    - Bread
+    - Eyescream
+    - OnionSoup
+    - TurnipStew
+    - ShocklateSmoothie
+    - CarrotSoup
+    - Fish1
+    - Fish2
+    - Fish3
+    - Fish4_cave
+    - Fish5
+    - Fish6
+    - Fish7
+    - Fish8
+    - Fish9
+    - Fish10
+    - Fish11
+    - Fish12
+    - FishRaw
+  weight factor: 0.80
+  teleport: false
 
 # ==================================================================================================
 
