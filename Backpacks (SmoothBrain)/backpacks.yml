@@ -433,7 +433,7 @@
 
 "Red Jute Backpack":
   description: "Tough red jute stitched tight, with a warm wolf fur interior."
-  size: 8x17 #136
+  size: 8x8 #136
   unique: none
   appearance:
     Sleepbag: B51919
@@ -456,5 +456,5 @@
       RedJute: 12
       PickaxeIron: 1
       WolfPelt: 10
-  weight factor: 0.75
+  weight factor: 0.70
   teleport: false
