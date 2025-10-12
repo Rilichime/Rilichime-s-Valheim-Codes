@@ -54,6 +54,40 @@
 
 # ==================================================================================================
 
+"Coin Pouch":
+  description: "A simple leather pouch. Holds your coins and other small valuables."
+  size: 8x4 #32
+  unique: none
+  appearance:
+    Sleepbag: hidden
+    BackpackStrapTop: hidden
+    BackpackFlap: hidden
+    Pot: hidden
+    Teapot: hidden
+    Knife: hidden
+    Pickaxe: hidden
+    Knifesheath: hidden
+    ToolstrapBottom: hidden
+    MetalclipLeft: hidden
+    PouchFront: hidden
+    PouchLeft: hidden
+    BackpackBody: hidden
+  crafting:
+    station: Workbench
+    level: 1
+    costs:
+      DeerHide: 5
+  valid items:
+    - Coins
+    - Ruby
+    - Amber
+    - AmberPearl
+    - SilverNecklace
+  weight factor: 0.80
+  teleport: false
+
+# ==================================================================================================
+
 "Troll Hide Satchel":
   description: "Built from troll hide — ugly as sin, but it’ll outlast you."
   size: 8x3 #24
@@ -168,6 +202,7 @@
   valid items:
     - FishingRod
     - HelmetFishingHat
+    - SpearChitin
     - FishingBait
     - FishingBaitForest
     - FishingBaitSwamp
@@ -558,6 +593,148 @@
 
 # ==================================================================================================
 
+"Merchant Lord’s Valise":
+  description: "Exquisitely made from the finest hides, trimmed with silver thread, and studded with rubies. A pack built for both profit and prestige."
+  size: 8x16 #128
+  unique: none
+  appearance:
+    Sleepbag: hidden
+    BackpackStrapTop: hidden
+    BackpackFlap: hidden
+    Pot: hidden
+    Teapot: hidden
+    Knife: hidden
+    Pickaxe: hidden
+    Knifesheath: hidden
+    ToolstrapBottom: hidden
+    MetalclipLeft: hidden
+    PouchFront: hidden
+    PouchLeft: hidden
+    BackpackBody: hidden
+  crafting:
+    station: Workbench
+    level: 1
+    costs:
+      LoxPelt: 30
+      LinenThread: 20
+      Silver: 20
+      Ruby: 10
+  valid items:
+    # Currency + Treasure
+    - Coins
+    - Ruby
+    - Amber
+    - AmberPearl
+    - SilverNecklace
+    # Hildir
+    - ArmorDress10
+    - ArmorTunic10
+    - HelmetHat5
+    - HelmetHat10
+    - HelmetSweatBand
+    - Sparkler
+    - BarberKit
+    - ArmorDress1
+    - ArmorDress4
+    - ArmorDress7
+    - ArmorTunic1
+    - ArmorTunic4
+    - ArmorTunic7
+    - HelmetHat3
+    - HelmetHat1
+    - HelmetHat6
+    - HelmetHat4
+    - HelmetHat2
+    - ArmorTunic8
+    - ArmorTunic5
+    - ArmorTunic2
+    - ArmorDress8
+    - ArmorDress5
+    - ArmorDress3
+    - ArmorDress6
+    - ArmorDress9
+    - ArmorTunic3
+    - ArmorTunic6
+    - ArmorTunic9
+    - HelmetHat7
+    - ArmorHarvester1
+    - ArmorHarvester2
+    - HelmetStrawHat
+    - FireworksRocket_White
+    - FireworksRocket_Red
+    - FireworksRocket_Yellow
+    - FireworksRocket_Green
+    - FireworksRocket_Blue
+    - FireworksRocket_Cyan
+    - FireworksRocket_Purple
+    - Ironpit
+    - chest_hildir1
+    - chest_hildir2
+    - chest_hildir3
+    # Haldor
+    - HelmetYule
+    - HelmetDverger
+    - BeltStrength
+    - YmirRemains
+    - FishingRod
+    - FishingBait
+    - Thunderstone
+    - ChickenEgg
+    - BarrelRings
+    # Bog Witch
+    - CandleWick
+    - Feaster
+    - ScytheHandle
+    - MeadTrollPheromones
+    - MushroomBzerker
+    - CuredSquirrelHamstring
+    - PowderedDragonEgg
+    - VineGreenSeeds
+    - PungentPebbles
+    - FragrantBundle
+    - FreshSeaweed
+    - BlobVial
+    - SpiceForests
+    - SpiceOceans
+    - SpiceMountains
+    - SpicePlains
+    - SpiceMistlands
+    - SpiceAshlands
+    # Epic Loot
+    - Andvaranaut
+    - ForestToken
+    - IronBountyToken
+    - GoldBountyToken
+    # Epic Loot Reagents
+    - RunestoneMagic
+    - RunestoneRare
+    - RunestoneEpic
+    - RunestoneLegendary
+    - RunestoneMythic
+    - ShardMagic
+    - ShardRare
+    - ShardEpic
+    - ShardLegendary
+    - ShardMythic
+    - DustMagic
+    - DustRare
+    - DustEpic
+    - DustLegendary
+    - DustMythic
+    - ReagentMagic
+    - ReagentRare
+    - ReagentEpic
+    - ReagentLegendary
+    - ReagentMythic
+    - EssenceMagic
+    - EssenceRare
+    - EssenceEpic
+    - EssenceLegendary
+    - EssenceMythic
+  weight factor: 0.60
+  teleport: false
+
+# ==================================================================================================
 
 "Lox Saddlebags":
   description: "Thick Lox hides form these sturdy bags, secured to a wood frame via iron nails."
@@ -581,16 +758,16 @@
     station: Workbench
     level: 1
     costs:
-      LoxPelt: 30
-      IronNails: 10
-      FineWood: 20
+      LoxPelt: 40
+      IronNails: 40
+      FineWood: 40
   weight factor: 0.60
   teleport: false
 
 # ==================================================================================================
 
 "Yellow Linen Bag":
-  description: "A bag made from a repurposed cloak."
+  description: "A simple bag fashioned from an old cloak. The seams are neat and sturdy."
   size: 8x12 #96
   unique: none
   appearance:
@@ -604,7 +781,7 @@
     Knifesheath: hidden
     ToolstrapBottom: hidden
     MetalclipLeft: hidden
-    PouchFront: B51919
+    PouchFront: hidden
     PouchLeft: hidden
     BackpackBody: 8CBA42
   crafting:
@@ -612,13 +789,65 @@
     level: 1
     costs:
       LinenCape: 1
-      LinenThread: 10
+      LinenThread: 15
   weight factor: 0.55
   teleport: false
 
 # ==================================================================================================
 
+"Veilscale Pack":
+  description: "A sturdy traveler’s pack made from the curious scaled hides of Mistlands hares. The frame is constructed from young branches of the world tree."
+  size: 8x13 #104
+  unique: none
+  appearance:
+    Sleepbag: 434132
+    BackpackStrapTop: 434132
+    BackpackFlap: 434132
+    Pot: hidden
+    Teapot: hidden
+    Knife: hidden
+    Pickaxe: hidden
+    Knifesheath: hidden
+    ToolstrapBottom: hidden
+    MetalclipLeft: hidden
+    PouchFront: 434132
+    PouchLeft: 434132
+    BackpackBody: 434132
+  crafting:
+    station: Workbench
+    level: 1
+    costs:
+      ScaleHide: 40
+      YggdrasilWood: 30
+  weight factor: 0.55
+  teleport: false
 
-
-
+# ==================================================================================================
   
+  "Eitrweave Bag":
+  description: "The strange fibers hum faintly with power, making the load within feel almost weightless."
+  size: 8x12 #104
+  unique: none
+  appearance:
+    Sleepbag: hidden
+    BackpackStrapTop: hidden
+    BackpackFlap: 36FF75
+    Pot: hidden
+    Teapot: hidden
+    Knife: hidden
+    Pickaxe: 006319
+    Knifesheath: hidden
+    ToolstrapBottom: hidden
+    MetalclipLeft: hidden
+    PouchFront: 434132
+    PouchLeft: 434132
+    BackpackBody: 36FF75
+  crafting:
+    station: Workbench
+    level: 1
+    costs:
+      LinenThread: 40
+      Eitr: 20
+      PickaxeBlackMetal: 1
+  weight factor: 0.35
+  teleport: false
