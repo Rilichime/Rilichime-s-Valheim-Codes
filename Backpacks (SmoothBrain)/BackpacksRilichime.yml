@@ -21,19 +21,23 @@
     level: 1
     costs:
       LeatherScraps: 20
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x1
   weight factor: 1
   teleport: false
   
 # ==================================================================================================
 
 "Simple Leather Sack":
-  description: "Decent leather, simple make. It does the job, and that’s enough."
+  description: "Decent leather, simple make. It does the job, and that's enough."
   size: 8x2 #8
   unique: none
   appearance:
     Sleepbag: hidden
     BackpackStrapTop: hidden
-    BackpackFlap: B7712B
+    BackpackFlap: A17446
     Pot: hidden
     Teapot: hidden
     Knife: hidden
@@ -49,6 +53,10 @@
     level: 1
     costs:
       DeerHide: 25
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x2
   weight factor: 0.95
   teleport: false
 
@@ -76,7 +84,11 @@
     station: Workbench
     level: 1
     costs:
-      DeerHide: 5
+      LeatherScraps: 6
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x4
   valid items:
     - Coins
     - Ruby
@@ -89,7 +101,7 @@
 # ==================================================================================================
 
 "Troll Hide Satchel":
-  description: "Built from troll hide — ugly as sin, but it’ll outlast you."
+  description: "Built from troll hide — ugly as sin, but it'll outlast you."
   size: 8x3 #24
   unique: none
   appearance:
@@ -111,12 +123,16 @@
     level: 1
     costs:
       TrollHide: 20
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x3
   weight factor: 0.80
   teleport: false
 
 # ==================================================================================================
 
-"Hunter’s Rucksack":
+"Hunter's Rucksack":
   description: "Strong, stubborn, and heavy — just like the creature it came from."
   size: 8x4 #32
   unique: none
@@ -140,6 +156,10 @@
     costs:
       BjornHide: 20
       KnifeButcher: 1
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x4
   weight factor: 0.90
   teleport: false
 
@@ -147,7 +167,7 @@
 
 # NOTE: Requires Epic Loot
 
-"Enchanted Hunter’s Rucksack":
+"Enchanted Hunter's Rucksack":
   description: "Sprinkled with magical dust, this rucksack feels surprisingly light, even while full."
   size: 8x4 #32
   unique: none
@@ -169,8 +189,12 @@
     station: Workbench
     level: 1
     costs:
-      Hunter’sRucksack: 1
-      RareDust: 12
+      Hunter'sRucksack: 1
+      DustRare: 12
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x4
   weight factor: 0.70
   teleport: false
 # ==================================================================================================
@@ -199,6 +223,10 @@
     costs:
       Bronze: 5
       DeerHide: 2
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x8
   valid items:
     - FishingRod
     - HelmetFishingHat
@@ -269,6 +297,10 @@
       Chain: 2
       Guck: 10
       Root: 10
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x5
   weight factor: 0.80
   teleport: false
 
@@ -298,6 +330,10 @@
     costs:
       FenrootPack: 1
       IronScrap: 20
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x6
   weight factor: 0.85
   teleport: false
 
@@ -328,6 +364,10 @@
       SerpentScale: 20
       KnifeChitin: 1
       Chitin: 10
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x7
   weight factor: 0.75
   teleport: false
 
@@ -357,6 +397,10 @@
     costs:
       SerpenthideBag: 1
       DustEpic: 12
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x7
   weight factor: 0.55
   teleport: false
 
@@ -390,6 +434,10 @@
       FreezeGland: 15
       KnifeSilver: 1
       Blueberries: 20
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x17
   valid items:
     # Mead
     - MeadFrostResist
@@ -503,7 +551,7 @@
     - MushroomMagecap
     - MushroomJotunPuffs
     - MushroomSmokePuff
-    - Fiddlehead Fern
+    - Fiddleheadfern
     - Vineberry
     # Animal Products
     - DeerMeat
@@ -558,6 +606,10 @@
       WolfPelt: 25
       KnifeSilver: 1
       Tin: 4
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x9
   weight factor: 0.70
   teleport: false
 
@@ -585,15 +637,19 @@
     station: Workbench
     level: 1
     costs:
-      RedJute: 20
+      JuteRed: 20
       PickaxeIron: 1
       WolfPelt: 10
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x10
   weight factor: 0.65
   teleport: false
 
 # ==================================================================================================
 
-"Merchant Lord’s Valise":
+"Merchant Lord's Valise":
   description: "Exquisitely made from the finest hides, trimmed with silver thread, and studded with rubies. A pack built for both profit and prestige."
   size: 8x16 #128
   unique: none
@@ -619,6 +675,10 @@
       LinenThread: 20
       Silver: 20
       Ruby: 10
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x16
   valid items:
     # Currency + Treasure
     - Coins
@@ -761,6 +821,10 @@
       LoxPelt: 40
       IronNails: 40
       FineWood: 40
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x11
   weight factor: 0.60
   teleport: false
 
@@ -788,15 +852,19 @@
     station: Workbench
     level: 1
     costs:
-      LinenCape: 1
+      CapeLinen: 1
       LinenThread: 15
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x12
   weight factor: 0.55
   teleport: false
 
 # ==================================================================================================
 
 "Veilscale Pack":
-  description: "A sturdy traveler’s pack made from the curious scaled hides of Mistlands hares. The frame is constructed from young branches of the world tree."
+  description: "A sturdy traveler's pack made from the curious scaled hides of Mistlands hares. The frame is constructed from young branches of the world tree."
   size: 8x13 #104
   unique: none
   appearance:
@@ -819,12 +887,16 @@
     costs:
       ScaleHide: 40
       YggdrasilWood: 30
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x13
   weight factor: 0.50
   teleport: false
 
 # ==================================================================================================
   
-  "Eitrweave Bag":
+"Eitrweave Bag":
   description: "The strange fibers hum faintly with power, making the load within feel almost weightless."
   size: 8x13 #104
   unique: none
@@ -849,6 +921,10 @@
       LinenThread: 40
       Eitr: 20
       PickaxeBlackMetal: 1
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x13
   weight factor: 0.30
   teleport: false
 
@@ -878,6 +954,10 @@
     costs:
       EitrweaveBag: 1
       BlackCore: 5
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x14
   weight factor: 0.30
   teleport: false
   
@@ -907,8 +987,12 @@
     costs:
       AskHide: 30
       MorgenSinew: 10
-      BonemawTooth: 20
+      BonemawSerpentTooth: 20
       FlametalNew: 10
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x15
   weight factor: 0.45
   teleport: false
   
@@ -916,7 +1000,7 @@
 
 
 "Infused Primal Hide Pack":
-  description: "Molten energy flows through the hide and sinew, subtly shifting the bag’s form to hold more than seems possible."
+  description: "Molten energy flows through the hide and sinew, subtly shifting the bag's form to hold more than seems possible."
   size: 8x16 #128
   unique: none
   appearance:
@@ -939,5 +1023,9 @@
     costs:
       PrimalHidePack: 1
       MoltenCore: 10
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x16
   weight factor: 0.45
   teleport: false
