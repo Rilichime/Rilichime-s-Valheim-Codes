@@ -819,7 +819,7 @@
     costs:
       ScaleHide: 40
       YggdrasilWood: 30
-  weight factor: 0.55
+  weight factor: 0.50
   teleport: false
 
 # ==================================================================================================
@@ -849,7 +849,7 @@
       LinenThread: 40
       Eitr: 20
       PickaxeBlackMetal: 1
-  weight factor: 0.35
+  weight factor: 0.30
   teleport: false
 
 # ==================================================================================================
@@ -878,5 +878,66 @@
     costs:
       EitrweaveBag: 1
       BlackCore: 5
-  weight factor: 0.35
+  weight factor: 0.30
+  teleport: false
+  
+# ==================================================================================================
+
+"Primal Hide Pack":
+  description: "A superb pack formed using Asksvin hide, stitched with Morgen sinew, framed by Bonemaw teeth, and secured via flametal buckles."
+  size: 8x15 #120
+  unique: none
+  appearance:
+    Sleepbag: hidden
+    BackpackStrapTop: hidden
+    BackpackFlap: 36FF75
+    Pot: hidden
+    Teapot: hidden
+    Knife: hidden
+    Pickaxe: 006319
+    Knifesheath: hidden
+    ToolstrapBottom: hidden
+    MetalclipLeft: hidden
+    PouchFront: 36FF75
+    PouchLeft: 36FF75
+    BackpackBody: 36FF75
+  crafting:
+    station: Workbench
+    level: 1
+    costs:
+      AskHide: 30
+      MorgenSinew: 10
+      BonemawTooth: 20
+      FlametalNew: 10
+  weight factor: 0.45
+  teleport: false
+  
+# ==================================================================================================
+
+
+"Infused Primal Hide Pack":
+  description: "Molten energy flows through the hide and sinew, subtly shifting the bag’s form to hold more than seems possible."
+  size: 8x16 #128
+  unique: none
+  appearance:
+    Sleepbag: hidden
+    BackpackStrapTop: hidden
+    BackpackFlap: FF7449
+    Pot: hidden
+    Teapot: hidden
+    Knife: hidden
+    Pickaxe: 006319
+    Knifesheath: hidden
+    ToolstrapBottom: hidden
+    MetalclipLeft: hidden
+    PouchFront: FF7449
+    PouchLeft: FF7449
+    BackpackBody: FF7449
+  crafting:
+    station: Workbench
+    level: 1
+    costs:
+      PrimalHidePack: 1
+      MoltenCore: 10
+  weight factor: 0.45
   teleport: false
