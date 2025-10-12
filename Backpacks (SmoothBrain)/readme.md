@@ -109,8 +109,9 @@
 - Fishing Bait (All Types)
 - Chitin Spear
 - Fishing Hat
-- All Fish (Raw and Cooked)
-- Food Items (Various Prepared Meals)
+- All Fish
+- Raw Fish
+- Stamina Foods
 
 </details>
 
@@ -195,15 +196,12 @@
 <details>
 <summary><b>Item Restrictions</b></summary>
 
-- All Mead Varieties
-- Barley Wine
-- All Cooked Meats
-- Honey
-- Royal Jelly
-- All Berries and Mushrooms
-- All Vegetables and Crops
-- All Animal Products
-- Various Prepared Foods
+- All Mead & Bases
+- Raw and Cooked Meats
+- Honey, Royal Jelly, Eggs
+- All Berries & Mushrooms
+- All Crops
+- All Foods
 
 </details>
 
