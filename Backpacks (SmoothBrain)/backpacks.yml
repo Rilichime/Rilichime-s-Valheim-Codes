@@ -27,7 +27,7 @@
 # ==================================================================================================
 
 "Simple Leather Sack":
-  description: "Good leather, simple make. It does the job, and that’s enough."
+  description: "Decent leather, simple make. It does the job, and that’s enough."
   size: 8x2 #8
   unique: none
   appearance:
