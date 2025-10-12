@@ -826,7 +826,7 @@
   
   "Eitrweave Bag":
   description: "The strange fibers hum faintly with power, making the load within feel almost weightless."
-  size: 8x12 #104
+  size: 8x13 #104
   unique: none
   appearance:
     Sleepbag: hidden
@@ -849,5 +849,34 @@
       LinenThread: 40
       Eitr: 20
       PickaxeBlackMetal: 1
+  weight factor: 0.35
+  teleport: false
+
+# ==================================================================================================
+
+"Imbued Eitrweave Bag":
+  description: "The dark energy of several black cores hum within, expanding space without burden."
+  size: 8x14 #112
+  unique: none
+  appearance:
+    Sleepbag: hidden
+    BackpackStrapTop: hidden
+    BackpackFlap: 36FF75
+    Pot: hidden
+    Teapot: hidden
+    Knife: hidden
+    Pickaxe: 006319
+    Knifesheath: hidden
+    ToolstrapBottom: hidden
+    MetalclipLeft: hidden
+    PouchFront: 434132
+    PouchLeft: 434132
+    BackpackBody: 36FF75
+  crafting:
+    station: Workbench
+    level: 1
+    costs:
+      EitrweaveBag: 1
+      BlackCore: 5
   weight factor: 0.35
   teleport: false
