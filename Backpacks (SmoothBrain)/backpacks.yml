@@ -430,10 +430,41 @@
   weight factor: 0.75
   teleport: false
 
+# ==================================================================================================
+
+"Wolf Pelt Pack":
+  description: "Thick pelts stitched tight, perfect for carrying gear through snow and ice."
+  size: 8x9 #72
+  unique: none
+  appearance:
+    Sleepbag: 595151
+    BackpackStrapTop: 595151
+    BackpackFlap: hidden
+    Pot: visible
+    Teapot: hidden
+    Knife: visible
+    Pickaxe: hidden
+    Knifesheath: visible
+    ToolstrapBottom: visible
+    MetalclipLeft: hidden
+    PouchFront: 595151
+    PouchLeft: 595151
+    BackpackBody: 595151
+  crafting:
+    station: Workbench
+    level: 1
+    costs:
+      WolfPelt: 25
+      KnifeSilver: 1
+      Tin: 4
+  weight factor: 0.70
+  teleport: false
+
+# ==================================================================================================
 
 "Red Jute Backpack":
   description: "Tough red jute stitched tight, with a warm wolf fur interior."
-  size: 8x8 #136
+  size: 8x10 #80
   unique: none
   appearance:
     Sleepbag: B51919
@@ -453,8 +484,75 @@
     station: Workbench
     level: 1
     costs:
-      RedJute: 12
+      RedJute: 20
       PickaxeIron: 1
       WolfPelt: 10
-  weight factor: 0.70
+  weight factor: 0.65
   teleport: false
+
+# ==================================================================================================
+
+
+"Lox Saddlebags":
+  description: "Thick Lox hides form these sturdy bags, secured to a wood frame via iron nails."
+  size: 8x11 #88
+  unique: none
+  appearance:
+    Sleepbag: hidden
+    BackpackStrapTop: hidden
+    BackpackFlap: hidden
+    Pot: hidden
+    Teapot: hidden
+    Knife: hidden
+    Pickaxe: hidden
+    Knifesheath: hidden
+    ToolstrapBottom: hidden
+    MetalclipLeft: hidden
+    PouchFront: hidden
+    PouchLeft: hidden
+    BackpackBody: hidden
+  crafting:
+    station: Workbench
+    level: 1
+    costs:
+      LoxPelt: 30
+      IronNails: 10
+      FineWood: 20
+  weight factor: 0.60
+  teleport: false
+
+# ==================================================================================================
+
+"Yellow Linen Bag":
+  description: "A bag made from a repurposed cloak."
+  size: 8x12 #96
+  unique: none
+  appearance:
+    Sleepbag: hidden
+    BackpackStrapTop: hidden
+    BackpackFlap: 8CBA42
+    Pot: hidden
+    Teapot: hidden
+    Knife: hidden
+    Pickaxe: hidden
+    Knifesheath: hidden
+    ToolstrapBottom: hidden
+    MetalclipLeft: hidden
+    PouchFront: B51919
+    PouchLeft: hidden
+    BackpackBody: 8CBA42
+  crafting:
+    station: Workbench
+    level: 1
+    costs:
+      LinenCape: 1
+      LinenThread: 10
+  weight factor: 0.55
+  teleport: false
+
+# ==================================================================================================
+
+
+
+
+  
