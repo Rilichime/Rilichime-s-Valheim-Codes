@@ -114,7 +114,7 @@
 # NOTE: Requires Epic Loot
 
 "Enchanted Hunter’s Rucksack":
-  description: "Sprinkled with magical dust, this rucksack carries more than it should — and feels lighter doing it."
+  description: "Sprinkled with magical dust, this rucksack feels surprisingly light, even while full."
   size: 8x4 #32
   unique: none
   appearance:
@@ -192,7 +192,7 @@
     PouchLeft: hidden
     BackpackBody: 578A3A
   crafting:
-    station: Workbench
+    station: Forge
     level: 1
     costs:
       FenrootPack: 1
@@ -200,25 +200,23 @@
   weight factor: 0.85
   teleport: false
 
-  
-
 # ==================================================================================================
 
-"Serpenthide Satchel":
-  description: "Scales and chitin make this pack almost as tough as the beasts it came from."
+"Serpenthide Bag":
+  description: "Scales and chitin make this bag almost as tough as the beasts it came from."
   size: 8x7 #56
   unique: none
   appearance:
     Sleepbag: hidden
     BackpackStrapTop: hidden
-    BackpackFlap: hidden
+    BackpackFlap: 578A3A
     Pot: hidden
     Teapot: hidden
-    Knife: hidden
+    Knife: E0D262
     Pickaxe: hidden
     Knifesheath: hidden
     ToolstrapBottom: hidden
-    MetalclipLeft: visible
+    MetalclipLeft: hidden
     PouchFront: hidden
     PouchLeft: hidden
     BackpackBody: 578A3A
@@ -227,16 +225,15 @@
     level: 1
     costs:
       SerpentScale: 20
-      EpicDust: 2
-      Guck: 10
-      Root: 10
+      KnifeChitin: 1
+      Chitin: 10
   weight factor: 0.75
   teleport: false
 
 # ==================================================================================================
 
-"Enchanted Serpenthide Satchel":
-  description: "Bound by magic, this satchel is lighter than it looks."
+"Enchanted Serpenthide Bag":
+  description: "Bound by magic, this bag is lighter than it looks."
   size: 8x7 #56
   unique: none
   appearance:
@@ -245,26 +242,219 @@
     BackpackFlap: hidden
     Pot: hidden
     Teapot: hidden
-    Knife: hidden
+    Knife: E0D262
     Pickaxe: hidden
     Knifesheath: hidden
     ToolstrapBottom: hidden
-    MetalclipLeft: visible
+    MetalclipLeft: hidden
     PouchFront: hidden
     PouchLeft: hidden
-    BackpackBody: 578A3A
+    BackpackBody: 85B5A0
   crafting:
     station: Workbench
     level: 1
     costs:
-      Serpenthide Satchel: 1
+      SerpenthideBag: 1
       DustEpic: 12
   weight factor: 0.55
   teleport: false
 
+# ==================================================================================================
+
+"Portable Refrigerator":
+  description: "Cold storage wherever you need it."
+  size: 8x17 #136
+  unique: none
+  appearance:
+    Sleepbag: hidden
+    BackpackStrapTop: hidden
+    BackpackFlap: 3E9BFF
+    Pot: visible
+    Teapot: visible
+    Knife: visible
+    Pickaxe: hidden
+    Knifesheath: hidden
+    ToolstrapBottom: hidden
+    MetalclipLeft: hidden
+    PouchFront: hidden
+    PouchLeft: hidden
+    BackpackBody: 3E9BFF
+  crafting:
+    station: Forge
+    level: 1
+    costs:
+      WolfPelt: 30
+      Tin: 10
+      Silver: 10
+      FreezeGland: 15
+      KnifeSilver: 1
+      Blueberries: 20
+  valid items:
+    # Mead
+    - MeadFrostResist
+    - MeadHealthMinor
+    - MeadStaminaMinor
+    - MeadBaseHealthMinor
+    - MeadBaseFrostResist
+    - MeadBaseStaminaMinor
+    - MeadPoisonResist
+    - MeadBasePoisonResist
+    - MeadTasty
+    - MeadBaseTasty
+    - MeadHealthMedium
+    - MeadBaseHealthMedium
+    - MeadTrollPheromones
+    - MeadBzerker
+    - MeadBaseBzerker
+    - MeadSwimmer
+    - MeadBaseSwimmer
+    - MeadHasty
+    - MeadBaseHasty
+    - MeadStrength
+    - MeadBaseStrength
+    - BarleyWine
+    - BarleyWineBase
+    - MeadStaminaMedium
+    - MeadBaseStaminaMedium
+    - MeadBugRepellent
+    - MeadBaseBugRepellent
+    - MeadHealthMajor
+    - MeadBaseHealthMajor
+    - MeadStaminaLingering
+    - MeadBaseStaminaLingering
+    - MeadEitrMinor
+    - MeadBaseEitrMinor
+    - MeadHealthLingering
+    - MeadBaseHealthLingering
+    - MeadEitrLingering
+    - MeadBaseEitrLingering
+    - NeckTailGrilled
+    - CookedMeat
+    - CookedDeerMeat
+    - BoarJerky
+    - CookedBjornMeat
+    - MinceMeatSauce
+    - QueensJam
+    - CarrotSoup
+    - DeerStew
+    - FishCooked
+    - SerpentMeatCooked
+    - SerpentStew
+    - Pukeberries
+    - ShocklateSmoothie
+    - TurnipStew
+    - Sausages
+    - BlackSoup
+    - FeastMeadows_Material
+    - FeastBlackforest_Material
+    - FeastSwamps_Material
+    - FeastOceans_Material
+    - CookedWolfMeat
+    - WolfJerky
+    - OnionSoup
+    - WolfMeatSkewer
+    - Eyescream
+    - FeastMountains_Material
+    - FishWraps
+    - CookedLoxMeat
+    - LoxPie
+    - BloodPudding
+    - Bread
+    - FeastPlains_Material
+    - CookedEgg
+    - CookedBugMeat
+    - CookedHareMeat
+    - CookedChickenMeat
+    - MeatPlatter
+    - HoneyGlazedChicken
+    - MisthareSupreme
+    - Salad
+    - RoyalJelly
+    - MushroomOmelette
+    - FishAndBread
+    - MagicallyStuffedShroom
+    - YggdrasilPorridge
+    - SeekerAspic
+    - FeastMistlands_Material
+    - CookedAsksvinMeat
+    - RottenMeat
+    - CookedVoltureMeat
+    - CookedBoneMawSerpentMeat
+    - FierySvinstew
+    - MashedMeat
+    - PiquantPie
+    - SpicyMarmalade
+    - ScorchingMedley
+    - RoastedCrustPie
+    - SizzlingBerryBroth
+    - SparklingShroomshake
+    - MarinatedGreens
+    - FeastAshlands_Material
+    # Crops and Forage
+    - Raspberry
+    - Dandelion
+    - Thistle
+    - Blueberries
+    - Mushroom
+    - MushroomYellow
+    - MushroomBzerker
+    - Cloudberry
+    - MushroomMagecap
+    - MushroomJotunPuffs
+    - MushroomSmokePuff
+    - Fiddlehead Fern
+    - Vineberry
+    # Animal Products
+    - DeerMeat
+    - RawMeat
+    - NeckTail
+    - KnifeButcher
+    - FishRaw
+    - BjornMeat
+    - SerpentMeat
+    - WolfMeat
+    - LoxMeat
+    - ChickenMeat
+    - BugMeat
+    - ChickenEgg
+    - HareMeat
+    - VoltureMeat
+    - AsksvinMeat
+    - BoneMawSerpentMeat
+    - VoltureEgg
+    - AsksvinEgg
+    - Honey
+    # Misc
+    - Feaster
+    - KnifeButcher
+  weight factor: 0.75
+  teleport: false
 
 
-
-
-
-  # For future: "Runes glow faintly, quietly lifting the burden within."
+"Red Jute Backpack":
+  description: "Tough red jute stitched tight, with a warm wolf fur interior."
+  size: 8x17 #136
+  unique: none
+  appearance:
+    Sleepbag: B51919
+    BackpackStrapTop: B51919
+    BackpackFlap: 3E9BFF
+    Pot: hidden
+    Teapot: hidden
+    Knife: hidden
+    Pickaxe: 808285
+    Knifesheath: hidden
+    ToolstrapBottom: visible
+    MetalclipLeft: hidden
+    PouchFront: B51919
+    PouchLeft: B51919
+    BackpackBody: B51919
+  crafting:
+    station: Workbench
+    level: 1
+    costs:
+      RedJute: 12
+      PickaxeIron: 1
+      WolfPelt: 10
+  weight factor: 0.75
+  teleport: false
