@@ -1,5 +1,15 @@
 # BackpacksRilichime.yml
 
+Adds 22 new progression-based, fantasy-themed backpacks to your game! 
+
+This mod is a .yml file. The core mod is Backpacks by Smoothbrain. This file is a config that adds my bags to that mod.  To use these bags, you'll need to edit your Smoothbrain-Backpacks conifg settings.
+
+> Use External YAML = On
+
+Epic Loot is required for two of the bags. If you don't want to use Epic Loot, modify or remove the sections for "Enchanted Hunter's Rucksack" and "Enchanted Serpenthide Bag".
+
+This file is easy to modify, so go wild! If you make any changes, make sure to back up the file, as any updates to this mod will overwrite your changes.
+
 ## 🌼 MEADOWS-TIER BAGS
 
 ---
