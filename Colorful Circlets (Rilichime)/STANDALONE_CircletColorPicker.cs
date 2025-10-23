@@ -478,6 +478,85 @@ namespace CircletColorPicker
             }
         }
 
+        // Harmony patch to apply color when circlet is placed on item stand
+        [HarmonyPatch(typeof(ItemStand), "UpdateAttach")]
+        [HarmonyPostfix]
+        static void ApplyColorOnItemStand(ItemStand __instance)
+        {
+            if (instance == null) return;
+
+            // Get the item data from the item stand
+            ItemDrop.ItemData attachedItem = __instance.GetAttachedItem();
+            if (attachedItem == null) return;
+
+            // Check if it's a circlet
+            if (attachedItem.m_shared.m_name == "$item_helmet_dverger")
+            {
+                instance.StartCoroutine(ApplyColorToItemStandDelayed(__instance, attachedItem));
+            }
+        }
+
+        static IEnumerator ApplyColorToItemStandDelayed(ItemStand itemStand, ItemDrop.ItemData circlet)
+        {
+            // Wait for CircletExtended to set up the light
+            yield return new WaitForSeconds(0.5f);
+
+            // Get saved color from item custom data
+            Color color = Color.white;
+            if (circlet.m_customData != null && circlet.m_customData.ContainsKey("circlet_color"))
+            {
+                string[] parts = circlet.m_customData["circlet_color"].Split(',');
+                if (parts.Length == 3)
+                {
+                    float.TryParse(parts[0], out float r);
+                    float.TryParse(parts[1], out float g);
+                    float.TryParse(parts[2], out float b);
+                    color = new Color(r, g, b);
+                }
+            }
+
+            // Apply color to all lights in the item stand's attached item
+            Light[] lights = itemStand.GetComponentsInChildren<Light>();
+            foreach (Light light in lights)
+            {
+                light.color = color;
+            }
+
+            // Continue enforcing the color for item stands
+            if (instance != null)
+            {
+                instance.StartCoroutine(EnforceItemStandColorContinuously(itemStand, circlet, color));
+            }
+        }
+
+        static IEnumerator EnforceItemStandColorContinuously(ItemStand itemStand, ItemDrop.ItemData circlet, Color targetColor)
+        {
+            // Continuously check and enforce color every second
+            while (itemStand != null)
+            {
+                yield return new WaitForSeconds(1f);
+
+                // Check if the circlet is still attached
+                ItemDrop.ItemData currentItem = itemStand.GetAttachedItem();
+                if (currentItem == null || currentItem != circlet)
+                {
+                    yield break; // Stop if item was removed
+                }
+
+                // Re-apply color to all lights
+                Light[] lights = itemStand.GetComponentsInChildren<Light>();
+                foreach (Light light in lights)
+                {
+                    if (light != null && Vector4.Distance(
+                        new Vector4(light.color.r, light.color.g, light.color.b, 1),
+                        new Vector4(targetColor.r, targetColor.g, targetColor.b, 1)) > 0.01f)
+                    {
+                        light.color = targetColor;
+                    }
+                }
+            }
+        }
+
         class ColorPreset
         {
             public string Name;
