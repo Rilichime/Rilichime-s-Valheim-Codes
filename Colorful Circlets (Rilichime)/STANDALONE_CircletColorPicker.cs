@@ -478,10 +478,23 @@ namespace CircletColorPicker
             }
         }
 
-        // Harmony patch to apply color when circlet is placed on item stand
+        // Harmony patch to apply color when circlet is placed on item stand via interaction
+        [HarmonyPatch(typeof(ItemStand), "Interact")]
+        [HarmonyPostfix]
+        static void ApplyColorOnItemStandInteract(ItemStand __instance, Humanoid character, bool hold, bool alt, ref bool __result)
+        {
+            if (instance == null || !__result) return;
+
+            // Only trigger on placement (not on hold/removal)
+            if (hold) return;
+
+            instance.StartCoroutine(CheckAndApplyColorToItemStand(__instance));
+        }
+
+        // Harmony patch to apply color when item stand updates (backup method)
         [HarmonyPatch(typeof(ItemStand), "UpdateAttach")]
         [HarmonyPostfix]
-        static void ApplyColorOnItemStand(ItemStand __instance)
+        static void ApplyColorOnItemStandUpdate(ItemStand __instance)
         {
             if (instance == null) return;
 
@@ -491,43 +504,65 @@ namespace CircletColorPicker
 
             ItemDrop.ItemData attachedItem = itemDrop.m_itemData;
 
-            // Check if it's a circlet
+            // Check if it's a circlet and apply color directly
             if (attachedItem.m_shared.m_name == "$item_helmet_dverger")
             {
-                instance.StartCoroutine(ApplyColorToItemStandDelayed(__instance, attachedItem));
+                ApplyColorToItemStandImmediate(__instance, attachedItem);
             }
         }
 
-        static IEnumerator ApplyColorToItemStandDelayed(ItemStand itemStand, ItemDrop.ItemData circlet)
+        static IEnumerator CheckAndApplyColorToItemStand(ItemStand itemStand)
         {
-            // Wait for CircletExtended to set up the light
-            yield return new WaitForSeconds(0.5f);
+            // Wait longer for CircletExtended to fully set up the light
+            yield return new WaitForSeconds(1f);
 
-            // Get saved color from item custom data
-            Color color = Color.white;
-            if (circlet.m_customData != null && circlet.m_customData.ContainsKey("circlet_color"))
+            // Get the ItemDrop component
+            ItemDrop itemDrop = itemStand.GetComponentInChildren<ItemDrop>();
+            if (itemDrop == null || itemDrop.m_itemData == null) yield break;
+
+            ItemDrop.ItemData circlet = itemDrop.m_itemData;
+
+            // Check if it's a circlet
+            if (circlet.m_shared.m_name == "$item_helmet_dverger")
             {
-                string[] parts = circlet.m_customData["circlet_color"].Split(',');
-                if (parts.Length == 3)
+                instance.Logger.LogInfo($"Applying color to circlet on item stand");
+
+                // Get saved color from item custom data
+                Color color = instance.GetCircletColor(circlet);
+
+                // Apply color to all lights
+                Light[] lights = itemStand.GetComponentsInChildren<Light>();
+                instance.Logger.LogInfo($"Found {lights.Length} lights on item stand");
+
+                foreach (Light light in lights)
                 {
-                    float.TryParse(parts[0], out float r);
-                    float.TryParse(parts[1], out float g);
-                    float.TryParse(parts[2], out float b);
-                    color = new Color(r, g, b);
+                    light.color = color;
+                    instance.Logger.LogInfo($"Applied color {color} to light");
+                }
+
+                // Continue enforcing the color
+                if (instance != null && lights.Length > 0)
+                {
+                    instance.StartCoroutine(EnforceItemStandColorContinuously(itemStand, circlet, color));
                 }
             }
+        }
 
-            // Apply color to all lights in the item stand's attached item
+        static void ApplyColorToItemStandImmediate(ItemStand itemStand, ItemDrop.ItemData circlet)
+        {
+            if (instance == null) return;
+
+            // Get saved color
+            Color color = instance.GetCircletColor(circlet);
+
+            // Apply to all lights immediately
             Light[] lights = itemStand.GetComponentsInChildren<Light>();
             foreach (Light light in lights)
             {
-                light.color = color;
-            }
-
-            // Continue enforcing the color for item stands
-            if (instance != null)
-            {
-                instance.StartCoroutine(EnforceItemStandColorContinuously(itemStand, circlet, color));
+                if (light != null && light.color != color)
+                {
+                    light.color = color;
+                }
             }
         }
 
