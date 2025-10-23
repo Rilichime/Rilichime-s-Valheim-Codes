@@ -481,7 +481,7 @@ namespace CircletColorPicker
         // Harmony patch to apply color when circlet is placed on item stand via interaction
         [HarmonyPatch(typeof(ItemStand), "Interact")]
         [HarmonyPostfix]
-        static void ApplyColorOnItemStandInteract(ItemStand __instance, Humanoid character, bool hold, bool alt, ref bool __result)
+        static void ApplyColorOnItemStandInteract(ItemStand __instance, Humanoid user, bool hold, bool alt, ref bool __result)
         {
             if (instance == null || !__result) return;
 
