@@ -483,12 +483,20 @@ namespace CircletColorPicker
         [HarmonyPostfix]
         static void ApplyColorOnItemStandInteract(ItemStand __instance, Humanoid user, bool hold, bool alt, ref bool __result)
         {
-            if (instance == null || !__result) return;
+            try
+            {
+                if (instance == null || !__result) return;
 
-            // Only trigger on placement (not on hold/removal)
-            if (hold) return;
+                // Only trigger on placement (not on hold/removal)
+                if (hold) return;
 
-            instance.StartCoroutine(CheckAndApplyColorToItemStand(__instance));
+                instance.StartCoroutine(CheckAndApplyColorToItemStand(__instance));
+            }
+            catch (System.Exception ex)
+            {
+                if (instance != null)
+                    instance.Logger.LogError($"Error in ApplyColorOnItemStandInteract: {ex.Message}");
+            }
         }
 
         // Harmony patch to apply color when item stand updates (backup method)
@@ -496,18 +504,26 @@ namespace CircletColorPicker
         [HarmonyPostfix]
         static void ApplyColorOnItemStandUpdate(ItemStand __instance)
         {
-            if (instance == null) return;
-
-            // Get the ItemDrop component from the item stand
-            ItemDrop itemDrop = __instance.GetComponentInChildren<ItemDrop>();
-            if (itemDrop == null || itemDrop.m_itemData == null) return;
-
-            ItemDrop.ItemData attachedItem = itemDrop.m_itemData;
-
-            // Check if it's a circlet and apply color directly
-            if (attachedItem.m_shared.m_name == "$item_helmet_dverger")
+            try
             {
-                ApplyColorToItemStandImmediate(__instance, attachedItem);
+                if (instance == null) return;
+
+                // Get the ItemDrop component from the item stand
+                ItemDrop itemDrop = __instance.GetComponentInChildren<ItemDrop>();
+                if (itemDrop == null || itemDrop.m_itemData == null) return;
+
+                ItemDrop.ItemData attachedItem = itemDrop.m_itemData;
+
+                // Check if it's a circlet and apply color directly
+                if (attachedItem.m_shared.m_name == "$item_helmet_dverger")
+                {
+                    ApplyColorToItemStandImmediate(__instance, attachedItem);
+                }
+            }
+            catch (System.Exception ex)
+            {
+                // Silently catch errors in UpdateAttach to avoid log spam (runs every frame)
+                // Only log once per instance
             }
         }
 
@@ -516,53 +532,71 @@ namespace CircletColorPicker
             // Wait longer for CircletExtended to fully set up the light
             yield return new WaitForSeconds(1f);
 
-            // Get the ItemDrop component
-            ItemDrop itemDrop = itemStand.GetComponentInChildren<ItemDrop>();
-            if (itemDrop == null || itemDrop.m_itemData == null) yield break;
-
-            ItemDrop.ItemData circlet = itemDrop.m_itemData;
-
-            // Check if it's a circlet
-            if (circlet.m_shared.m_name == "$item_helmet_dverger")
+            try
             {
-                instance.Logger.LogInfo($"Applying color to circlet on item stand");
+                // Get the ItemDrop component
+                ItemDrop itemDrop = itemStand.GetComponentInChildren<ItemDrop>();
+                if (itemDrop == null || itemDrop.m_itemData == null) yield break;
 
-                // Get saved color from item custom data
-                Color color = instance.GetCircletColor(circlet);
+                ItemDrop.ItemData circlet = itemDrop.m_itemData;
 
-                // Apply color to all lights
-                Light[] lights = itemStand.GetComponentsInChildren<Light>();
-                instance.Logger.LogInfo($"Found {lights.Length} lights on item stand");
-
-                foreach (Light light in lights)
+                // Check if it's a circlet
+                if (circlet.m_shared.m_name == "$item_helmet_dverger")
                 {
-                    light.color = color;
-                    instance.Logger.LogInfo($"Applied color {color} to light");
-                }
+                    instance.Logger.LogInfo($"Applying color to circlet on item stand");
 
-                // Continue enforcing the color
-                if (instance != null && lights.Length > 0)
-                {
-                    instance.StartCoroutine(EnforceItemStandColorContinuously(itemStand, circlet, color));
+                    // Get saved color from item custom data
+                    Color color = instance.GetCircletColor(circlet);
+
+                    // Apply color to all lights
+                    Light[] lights = itemStand.GetComponentsInChildren<Light>();
+                    instance.Logger.LogInfo($"Found {lights.Length} lights on item stand");
+
+                    foreach (Light light in lights)
+                    {
+                        if (light != null)
+                        {
+                            light.color = color;
+                            instance.Logger.LogInfo($"Applied color {color} to light");
+                        }
+                    }
+
+                    // Continue enforcing the color
+                    if (instance != null && lights.Length > 0)
+                    {
+                        instance.StartCoroutine(EnforceItemStandColorContinuously(itemStand, circlet, color));
+                    }
                 }
+            }
+            catch (System.Exception ex)
+            {
+                if (instance != null)
+                    instance.Logger.LogError($"Error in CheckAndApplyColorToItemStand: {ex.Message}");
             }
         }
 
         static void ApplyColorToItemStandImmediate(ItemStand itemStand, ItemDrop.ItemData circlet)
         {
-            if (instance == null) return;
-
-            // Get saved color
-            Color color = instance.GetCircletColor(circlet);
-
-            // Apply to all lights immediately
-            Light[] lights = itemStand.GetComponentsInChildren<Light>();
-            foreach (Light light in lights)
+            try
             {
-                if (light != null && light.color != color)
+                if (instance == null) return;
+
+                // Get saved color
+                Color color = instance.GetCircletColor(circlet);
+
+                // Apply to all lights immediately
+                Light[] lights = itemStand.GetComponentsInChildren<Light>();
+                foreach (Light light in lights)
                 {
-                    light.color = color;
+                    if (light != null && light.color != color)
+                    {
+                        light.color = color;
+                    }
                 }
+            }
+            catch (System.Exception ex)
+            {
+                // Silently fail - this runs frequently
             }
         }
 
@@ -573,23 +607,33 @@ namespace CircletColorPicker
             {
                 yield return new WaitForSeconds(1f);
 
-                // Check if the circlet is still attached
-                ItemDrop itemDrop = itemStand.GetComponentInChildren<ItemDrop>();
-                if (itemDrop == null || itemDrop.m_itemData == null || itemDrop.m_itemData != circlet)
+                try
                 {
-                    yield break; // Stop if item was removed
-                }
-
-                // Re-apply color to all lights
-                Light[] lights = itemStand.GetComponentsInChildren<Light>();
-                foreach (Light light in lights)
-                {
-                    if (light != null && Vector4.Distance(
-                        new Vector4(light.color.r, light.color.g, light.color.b, 1),
-                        new Vector4(targetColor.r, targetColor.g, targetColor.b, 1)) > 0.01f)
+                    // Check if the circlet is still attached
+                    ItemDrop itemDrop = itemStand.GetComponentInChildren<ItemDrop>();
+                    if (itemDrop == null || itemDrop.m_itemData == null || itemDrop.m_itemData != circlet)
                     {
-                        light.color = targetColor;
+                        yield break; // Stop if item was removed
                     }
+
+                    // Re-apply color to all lights
+                    Light[] lights = itemStand.GetComponentsInChildren<Light>();
+                    foreach (Light light in lights)
+                    {
+                        if (light != null && Vector4.Distance(
+                            new Vector4(light.color.r, light.color.g, light.color.b, 1),
+                            new Vector4(targetColor.r, targetColor.g, targetColor.b, 1)) > 0.01f)
+                        {
+                            light.color = targetColor;
+                        }
+                    }
+                }
+                catch (System.Exception ex)
+                {
+                    // Stop enforcing if there's an error
+                    if (instance != null)
+                        instance.Logger.LogWarning($"Error in EnforceItemStandColorContinuously: {ex.Message}");
+                    yield break;
                 }
             }
         }
