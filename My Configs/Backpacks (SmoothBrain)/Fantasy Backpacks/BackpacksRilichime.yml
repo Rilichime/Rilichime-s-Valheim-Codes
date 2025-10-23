@@ -1,5 +1,5 @@
 "Tattered Leather Pouch":
-  description: "Roughly stitched from old scraps — not pretty, but it gets you by."
+  description: "Roughly stitched from old scraps — not pretty, but it gets you by. (8 slots, 0% weight reduction.)"
   size: 8x1 #8
   unique: none
   appearance:
@@ -31,7 +31,7 @@
 # ==================================================================================================
 
 "Simple Leather Sack":
-  description: "Decent leather, simple make. It does the job, and that's enough."
+  description: "Decent leather, simple make. It does the job, and that's enough. (16 slots, 5% weight reduction.)"
   size: 8x2 #8
   unique: none
   appearance:
@@ -63,7 +63,7 @@
 # ==================================================================================================
 
 "Coin Pouch":
-  description: "A simple leather pouch. Holds your coins and other small valuables."
+  description: "A simple leather pouch. Holds your coins and other small valuables. (32 slots, 20% weight reduction. Can only hold coins and valuables (rubies etc).)"
   size: 8x4 #32
   unique: none
   appearance:
@@ -101,7 +101,7 @@
 # ==================================================================================================
 
 "Troll Hide Satchel":
-  description: "Built from troll hide — ugly as sin, but it'll outlast you."
+  description: "Built from troll hide — ugly as sin, but it'll outlast you. (24 slots, 20% weight reduction.)"
   size: 8x3 #24
   unique: none
   appearance:
@@ -133,7 +133,7 @@
 # ==================================================================================================
 
 "Hunter's Rucksack":
-  description: "Strong, stubborn, and heavy — just like the creature it came from."
+  description: "Strong, stubborn, and heavy — just like the creature it came from. (32 slots, 10% weight reduction.)"
   size: 8x4 #32
   unique: none
   appearance:
@@ -168,7 +168,7 @@
 # NOTE: Requires Epic Loot
 
 "Enchanted Hunter's Rucksack":
-  description: "Sprinkled with magical dust, this rucksack feels surprisingly light, even while full."
+  description: "Sprinkled with magical dust, this rucksack feels surprisingly light, even while full. (32 slots, 30% weight reduction.)"
   size: 8x4 #32
   unique: none
   appearance:
@@ -200,8 +200,8 @@
 # ==================================================================================================
 
 "Tackle Box":
-  description: "Everything a fisherman needs, all in one place."
-  size: 8x8 #64
+  description: "Everything a fisherman needs, all in one place. (80 slots, 40% weight reduction. Can only hold rods, fish hat, harpoon, baits, fish, and stamina foods (Carrot Soup, Bread, etc).)"
+  size: 8x10 #80
   unique: none
   appearance:
     Sleepbag: hidden
@@ -223,10 +223,11 @@
     costs:
       Bronze: 5
       DeerHide: 2
+      Resin: 20
   upgrade:
     1:
       LeatherScraps: 1
-      size: 8x8
+      size: 8x10
   valid items:
     - FishingRod
     - HelmetFishingHat
@@ -266,13 +267,13 @@
     - Fish11
     - Fish12
     - FishRaw
-  weight factor: 0.80
+  weight factor: 0.60
   teleport: false
 
 # ==================================================================================================
 
 "Fenroot Pack":
-  description: "It clinks, it drips, it stinks. But it carries."
+  description: "It clinks, it drips, it stinks. But it carries. (40 slots, 20% weight reduction.)"
   size: 8x5 #40
   unique: none
   appearance:
@@ -307,7 +308,7 @@
 # ==================================================================================================
 
 "Reinforced Fenroot Pack":
-  description: "A stiff, dependable pack — heavy on your back, but fearless in the mire."
+  description: "A stiff, dependable pack — heavy on your back, but fearless in the mire. (48 slots, 15% weight reduction.)"
   size: 8x6 #48
   unique: none
   appearance:
@@ -340,7 +341,7 @@
 # ==================================================================================================
 
 "Serpenthide Bag":
-  description: "Scales and chitin make this bag almost as tough as the beasts it came from."
+  description: "Scales and chitin make this bag almost as tough as the beasts it came from. (56 slots, 25% weight reduction.)"
   size: 8x7 #56
   unique: none
   appearance:
@@ -374,7 +375,7 @@
 # ==================================================================================================
 
 "Enchanted Serpenthide Bag":
-  description: "Bound by magic, this bag is lighter than it looks."
+  description: "Bound by magic, this bag is lighter than it looks. (56 slots, 45% weight reduction.)"
   size: 8x7 #56
   unique: none
   appearance:
@@ -407,7 +408,7 @@
 # ==================================================================================================
 
 "Portable Refrigerator":
-  description: "Cold storage wherever you need it."
+  description: "Cold storage wherever you need it. (136 slots, 50% weight reduction. Can only hold food, mead, animal products (honey, eggs, and meat), crops, forage, butcher knife, and serving tray.)"
   size: 8x17 #136
   unique: none
   appearance:
@@ -425,13 +426,13 @@
     PouchLeft: hidden
     BackpackBody: 3E9BFF
   crafting:
-    station: Forge
+    station: Artisanstation
     level: 1
     costs:
       WolfPelt: 30
       Tin: 10
-      Silver: 10
-      FreezeGland: 15
+      Silver: 20
+      FreezeGland: 12
       KnifeSilver: 1
       Blueberries: 20
   upgrade:
@@ -557,7 +558,6 @@
     - DeerMeat
     - RawMeat
     - NeckTail
-    - KnifeButcher
     - FishRaw
     - BjornMeat
     - SerpentMeat
@@ -576,13 +576,13 @@
     # Misc
     - Feaster
     - KnifeButcher
-  weight factor: 0.75
+  weight factor: 0.50
   teleport: false
 
 # ==================================================================================================
 
 "Wolf Pelt Pack":
-  description: "Thick pelts stitched tight, perfect for carrying gear through snow and ice."
+  description: "Thick pelts stitched tight, perfect for carrying gear through snow and ice. (72 slots, 30% weight reduction.)"
   size: 8x9 #72
   unique: none
   appearance:
@@ -616,7 +616,7 @@
 # ==================================================================================================
 
 "Red Jute Backpack":
-  description: "Tough red jute stitched tight, with a warm wolf fur interior."
+  description: "Tough red jute stitched tight, with a warm wolf fur interior. (80 slots, 45% weight reduction.)"
   size: 8x10 #80
   unique: none
   appearance:
@@ -650,7 +650,7 @@
 # ==================================================================================================
 
 "Merchant Lord's Valise":
-  description: "Exquisitely made from the finest hides, trimmed with silver thread, and studded with rubies. A pack built for both profit and prestige."
+  description: "Exquisitely made from the finest hides, trimmed with silver thread, and studded with rubies. A pack built for both profit and prestige. (128 slots, 60% weight reduction. Can only hold coins, valuables (ruby etc), and items bought from the three traders.)"
   size: 8x16 #128
   unique: none
   appearance:
@@ -668,7 +668,7 @@
     PouchLeft: hidden
     BackpackBody: hidden
   crafting:
-    station: Workbench
+    station: Artisanstation
     level: 1
     costs:
       LoxPelt: 30
@@ -791,13 +791,13 @@
     - EssenceEpic
     - EssenceLegendary
     - EssenceMythic
-  weight factor: 0.60
+  weight factor: 0.40
   teleport: false
 
 # ==================================================================================================
 
 "Lox Saddlebags":
-  description: "Thick Lox hides form these sturdy bags, secured to a wood frame via iron nails."
+  description: "Thick Lox hides form these sturdy bags, secured to a wood frame via iron nails. (88 slots, 40% weight reduction.)"
   size: 8x11 #88
   unique: none
   appearance:
@@ -815,7 +815,7 @@
     PouchLeft: hidden
     BackpackBody: hidden
   crafting:
-    station: Workbench
+    station: Artisanstation
     level: 1
     costs:
       LoxPelt: 40
@@ -830,8 +830,8 @@
 
 # ==================================================================================================
 
-"Red Linen Bag":
-  description: "A simple bag fashioned from an old cloak. The seams are neat and sturdy."
+"Yellow Linen Bag":
+  description: "A bag fashioned from an old cloak. The seams are neat and sturdy. (96 slots, 45% weight reduction.)"
   size: 8x12 #96
   unique: none
   appearance:
@@ -854,6 +854,7 @@
     costs:
       CapeLinen: 1
       LinenThread: 15
+      Cloudberry: 50
   upgrade:
     1:
       LeatherScraps: 1
@@ -864,7 +865,7 @@
 # ==================================================================================================
 
 "Veilscale Pack":
-  description: "A sturdy traveler's pack made from the curious scaled hides of Mistlands hares. The frame is constructed from young branches of the world tree."
+  description: "A sturdy traveler's pack made from the curious scaled hides of Mistlands hares. The frame is constructed from young branches of the world tree. (104 slots, 50% weight reduction.)"
   size: 8x13 #104
   unique: none
   appearance:
@@ -897,7 +898,7 @@
 # ==================================================================================================
   
 "Eitrweave Bag":
-  description: "The strange fibers hum faintly with power, making the load within feel almost weightless."
+  description: "The strange fibers hum faintly with power, making the load within feel almost weightless. (104 slots, 70% weight reduction.)"
   size: 8x13 #104
   unique: none
   appearance:
@@ -915,7 +916,7 @@
     PouchLeft: 36FF75
     BackpackBody: 36FF75
   crafting:
-    station: Workbench
+    station: Magetable
     level: 1
     costs:
       LinenThread: 40
@@ -931,7 +932,7 @@
 # ==================================================================================================
 
 "Imbued Eitrweave Bag":
-  description: "The dark energy of several black cores hum within, expanding space without burden."
+  description: "The dark energy of several black cores hum within, expanding space without burden. (112 slots, 70% weight reduction.)"
   size: 8x14 #112
   unique: none
   appearance:
@@ -949,11 +950,11 @@
     PouchLeft: 36FF75
     BackpackBody: 36FF75
   crafting:
-    station: Workbench
+    station: Magetable
     level: 1
     costs:
       EitrweaveBag: 1
-      BlackCore: 5
+      BlackCore: 2
   upgrade:
     1:
       LeatherScraps: 1
@@ -964,25 +965,25 @@
 # ==================================================================================================
 
 "Primal Hide Pack":
-  description: "A superb pack formed using Asksvin hide, stitched with Morgen sinew, framed by Bonemaw teeth, and secured via flametal buckles."
+  description: "A superb pack formed using Asksvin hide, stitched with Morgen sinew, framed by Bonemaw teeth, and secured via flametal buckles. (120 slots, 55% weight reduction.)"
   size: 8x15 #120
   unique: none
   appearance:
-    Sleepbag: hidden
-    BackpackStrapTop: hidden
-    BackpackFlap: 36FF75
+    Sleepbag: 8BA56A
+    BackpackStrapTop: 8BA56A
+    BackpackFlap: 8BA56A
     Pot: hidden
     Teapot: hidden
     Knife: hidden
-    Pickaxe: 006319
+    Pickaxe: hidden
     Knifesheath: hidden
     ToolstrapBottom: hidden
     MetalclipLeft: hidden
-    PouchFront: 36FF75
-    PouchLeft: 36FF75
-    BackpackBody: 36FF75
+    PouchFront: 8BA56A
+    PouchLeft: 8BA56A
+    BackpackBody: 8BA56A
   crafting:
-    station: Workbench
+    station: Blackforge
     level: 1
     costs:
       AskHide: 30
@@ -999,26 +1000,26 @@
 # ==================================================================================================
 
 
-"Infused Primal Hide Pack":
-  description: "Molten energy flows through the hide and sinew, subtly shifting the bag's form to hold more than seems possible."
+"Imbued Primal Hide Pack":
+  description: "Molten energy flows through the hide and sinew, subtly shifting the bag's form to hold more than seems possible. (128 slots, 55% weight reduction.)"
   size: 8x16 #128
   unique: none
   appearance:
-    Sleepbag: hidden
-    BackpackStrapTop: hidden
-    BackpackFlap: FF7449
+    Sleepbag: 8BA56A
+    BackpackStrapTop: 8BA56A
+    BackpackFlap: 8BA56A
     Pot: hidden
     Teapot: hidden
     Knife: hidden
-    Pickaxe: 006319
+    Pickaxe: hidden
     Knifesheath: hidden
     ToolstrapBottom: hidden
     MetalclipLeft: hidden
-    PouchFront: FF7449
-    PouchLeft: FF7449
-    BackpackBody: FF7449
+    PouchFront: 8BA56A
+    PouchLeft: 8BA56A
+    BackpackBody: 8BA56A
   crafting:
-    station: Workbench
+    station: Magetable
     level: 1
     costs:
       PrimalHidePack: 1
@@ -1028,4 +1029,43 @@
       LeatherScraps: 1
       size: 8x16
   weight factor: 0.45
+  teleport: false
+
+  # ==================================================================================================
+
+"Satchel of the Void":
+  description: "Threads of eitr, fire, and shadow weave together where no light should be. The Fader’s essence stirs beneath its surface — patient, endless, and dreaming of the void between stars. (160 slots, 80% weight reduction.)"
+  size: 8x20 #160
+  unique: none
+  appearance:
+    Sleepbag: hidden
+    BackpackStrapTop: hidden
+    BackpackFlap: 000000
+    Pot: hidden
+    Teapot: hidden
+    Knife: hidden
+    Pickaxe: hidden
+    Knifesheath: hidden
+    ToolstrapBottom: hidden
+    MetalclipLeft: hidden
+    PouchFront: hidden
+    PouchLeft: hidden
+    BackpackBody: 000000
+  crafting:
+    station: Magetable
+    level: 1
+    costs:
+      MoltenCore: 10
+      BlackCore: 10
+      FaderDrop: 5
+      Eitr: 50
+      CelestialFeather: 20
+      GemstoneBlue: 1
+      GemstoneRed: 1
+      GemstoneGreen: 1
+  upgrade:
+    1:
+      LeatherScraps: 1
+      size: 8x20
+  weight factor: 0.20
   teleport: false
