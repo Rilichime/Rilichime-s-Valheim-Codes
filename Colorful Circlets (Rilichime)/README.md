@@ -1,4 +1,4 @@
-# Colorful Circlets by Rilichime
+# Colorful Circlets v1.0.0 by Rilichime
 
 This is a mod made using AI (Claude). It is built on CircletExtended's framework. 
 
