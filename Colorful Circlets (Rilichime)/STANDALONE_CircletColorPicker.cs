@@ -485,9 +485,11 @@ namespace CircletColorPicker
         {
             if (instance == null) return;
 
-            // Get the item data from the item stand
-            ItemDrop.ItemData attachedItem = __instance.GetAttachedItem();
-            if (attachedItem == null) return;
+            // Get the ItemDrop component from the item stand
+            ItemDrop itemDrop = __instance.GetComponentInChildren<ItemDrop>();
+            if (itemDrop == null || itemDrop.m_itemData == null) return;
+
+            ItemDrop.ItemData attachedItem = itemDrop.m_itemData;
 
             // Check if it's a circlet
             if (attachedItem.m_shared.m_name == "$item_helmet_dverger")
@@ -537,8 +539,8 @@ namespace CircletColorPicker
                 yield return new WaitForSeconds(1f);
 
                 // Check if the circlet is still attached
-                ItemDrop.ItemData currentItem = itemStand.GetAttachedItem();
-                if (currentItem == null || currentItem != circlet)
+                ItemDrop itemDrop = itemStand.GetComponentInChildren<ItemDrop>();
+                if (itemDrop == null || itemDrop.m_itemData == null || itemDrop.m_itemData != circlet)
                 {
                     yield break; // Stop if item was removed
                 }
