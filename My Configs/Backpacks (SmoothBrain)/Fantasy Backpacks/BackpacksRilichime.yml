@@ -1,5 +1,5 @@
 "Tattered Leather Pouch":
-  description: "Roughly stitched from old scraps — not pretty, but it gets you by. (8 slots, 0% weight reduction.)"
+  description: "Roughly stitched from old scraps — not pretty, but it will suffice. (8 slots, 0% weight reduction.)"
   size: 8x1 #8
   unique: none
   appearance:
