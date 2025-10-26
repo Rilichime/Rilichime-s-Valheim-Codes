@@ -1,1071 +1,485 @@
-"Tattered Leather Pouch":
-  description: "Roughly stitched from old scraps — not pretty, but it will suffice. (8 slots, 0% weight reduction.)"
-  size: 8x1 #8
-  unique: none
-  appearance:
-    Sleepbag: hidden
-    BackpackStrapTop: hidden
-    BackpackFlap: hidden
-    Pot: hidden
-    Teapot: hidden
-    Knife: hidden
-    Pickaxe: hidden
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: hidden
-    PouchLeft: hidden
-    BackpackBody: A17446
-  crafting:
-    station: Workbench
-    level: 1
-    costs:
-      LeatherScraps: 20
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x1
-  weight factor: 1
-  teleport: false
-  
-# ==================================================================================================
+## Adds 25 new progression-based, fantasy-themed backpacks to your game! 
 
-"Simple Leather Sack":
-  description: "Decent leather, simple make. It does the job, and that's enough. (16 slots, 5% weight reduction.)"
-  size: 8x2 #8
-  unique: none
-  appearance:
-    Sleepbag: hidden
-    BackpackStrapTop: hidden
-    BackpackFlap: A17446
-    Pot: hidden
-    Teapot: hidden
-    Knife: hidden
-    Pickaxe: hidden
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: hidden
-    PouchLeft: hidden
-    BackpackBody: A17446
-  crafting:
-    station: Workbench
-    level: 1
-    costs:
-      DeerHide: 25
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x2
-  weight factor: 0.95
-  teleport: false
+## This mod is a .yml file. The core mod is Backpacks by Smoothbrain. This file is a config that adds my bags to that mod.  To use these bags, you'll need to edit your Smoothbrain-Backpacks conifg settings: Use External YAML = On
 
-# ==================================================================================================
+## This file is easy to modify, so go wild! If you make any changes, make sure to back up the file, as any updates to this mod will overwrite your changes.
 
-"Coin Pouch":
-  description: "A simple leather pouch. Holds your coins and other small valuables. (32 slots, 20% weight reduction. Can only hold coins and valuables (rubies etc).)"
-  size: 8x4 #32
-  unique: none
-  appearance:
-    Sleepbag: hidden
-    BackpackStrapTop: hidden
-    BackpackFlap: hidden
-    Pot: hidden
-    Teapot: hidden
-    Knife: hidden
-    Pickaxe: hidden
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: hidden
-    PouchLeft: hidden
-    BackpackBody: hidden
-  crafting:
-    station: Workbench
-    level: 1
-    costs:
-      LeatherScraps: 6
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x4
-  valid items:
-    - Coins
-    - Ruby
-    - Amber
-    - AmberPearl
-    - SilverNecklace
-  weight factor: 0.80
-  teleport: false
+## Epic Loot is required for two of the bags. If you don't want to use Epic Loot, modify or remove the sections for "Enchanted Hunter's Rucksack" and "Enchanted Serpenthide Bag".
 
-# ==================================================================================================
+## Need help? Contact me on Discord @Chimeria!
 
-"Troll Hide Satchel":
-  description: "Built from troll hide — ugly as sin, but it'll outlast you. (24 slots, 20% weight reduction.)"
-  size: 8x3 #24
-  unique: none
-  appearance:
-    Sleepbag: 37758A
-    BackpackStrapTop: 37758A
-    BackpackFlap: 37758A
-    Pot: hidden
-    Teapot: hidden
-    Knife: hidden
-    Pickaxe: hidden
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: hidden
-    PouchLeft: hidden
-    BackpackBody: 37758A
-  crafting:
-    station: Workbench
-    level: 1
-    costs:
-      TrollHide: 20
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x3
-  weight factor: 0.80
-  teleport: false
+---
 
-# ==================================================================================================
+## 🌼 MEADOWS-TIER BAGS
 
-"Hunter's Rucksack":
-  description: "Strong, stubborn, and heavy — just like the creature it came from. (32 slots, 10% weight reduction.)"
-  size: 8x4 #32
-  unique: none
-  appearance:
-    Sleepbag: 3C2F2A
-    BackpackStrapTop: 3C2F2A
-    BackpackFlap: 3C2F2A
-    Pot: hidden
-    Teapot: hidden
-    Knife: visible
-    Pickaxe: hidden
-    Knifesheath: 3C2F2A
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: hidden
-    PouchLeft: hidden
-    BackpackBody: 3C2F2A
-  crafting:
-    station: Workbench
-    level: 1
-    costs:
-      BjornHide: 20
-      KnifeButcher: 1
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x4
-  weight factor: 0.90
-  teleport: false
+---
 
-# ==================================================================================================
+## Tattered Leather Pouch
+*"Roughly stitched from old scraps — not pretty, but it gets you by."*
 
-# NOTE: Requires Epic Loot
+**Stats:**
+- **Slots:** 8
+- **Weight Reduction:** 0%
 
-"Enchanted Hunter's Rucksack":
-  description: "Sprinkled with magical dust, this rucksack feels surprisingly light, even while full. (32 slots, 30% weight reduction.)"
-  size: 8x4 #32
-  unique: none
-  appearance:
-    Sleepbag: 3C2F2A
-    BackpackStrapTop: 3C2F2A
-    BackpackFlap: 3C2F2A
-    Pot: hidden
-    Teapot: hidden
-    Knife: visible
-    Pickaxe: hidden
-    Knifesheath: 3C2F2A
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: hidden
-    PouchLeft: hidden
-    BackpackBody: 3C2F2A
-  crafting:
-    station: Workbench
-    level: 1
-    costs:
-      Hunter'sRucksack: 1
-      DustRare: 12
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x4
-  weight factor: 0.70
-  teleport: false
-# ==================================================================================================
+**Crafting Requirements:**
+- Workbench (Level 1)
+- Leather Scraps x20
 
-"Tackle Box":
-  description: "Everything a fisherman needs, all in one place. (80 slots, 40% weight reduction. Can only hold rods, fish hat, harpoon, baits, fish, and stamina foods (Carrot Soup, Bread, etc).)"
-  size: 8x10 #80
-  unique: none
-  appearance:
-    Sleepbag: hidden
-    BackpackStrapTop: hidden
-    BackpackFlap: hidden
-    Pot: hidden
-    Teapot: hidden
-    Knife: visible
-    Pickaxe: hidden
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: hidden
-    PouchLeft: hidden
-    BackpackBody: hidden
-  crafting:
-    station: Forge
-    level: 1
-    costs:
-      Bronze: 5
-      DeerHide: 2
-      Resin: 20
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x10
-  valid items:
-    - FishingRod
-    - HelmetFishingHat
-    - SpearChitin
-    - FishingBait
-    - FishingBaitForest
-    - FishingBaitSwamp
-    - FishingBaitOcean
-    - FishingBaitCave
-    - FishingBaitPlains
-    - FishingBaitMistlands
-    - FishingBaitAshlands
-    - FishingBaitDeepNorth
-    - RoastedCrustPie
-    - ScorchingMedley
-    - FishAndBread
-    - SpicyMarmalade
-    - MushroomOmelette
-    - Salad
-    - BloodPudding
-    - Bread
-    - Eyescream
-    - OnionSoup
-    - TurnipStew
-    - ShocklateSmoothie
-    - CarrotSoup
-    - Fish1
-    - Fish2
-    - Fish3
-    - Fish4_cave
-    - Fish5
-    - Fish6
-    - Fish7
-    - Fish8
-    - Fish9
-    - Fish10
-    - Fish11
-    - Fish12
-    - FishRaw
-  weight factor: 0.60
-  teleport: false
+---
 
-# ==================================================================================================
+## Simple Leather Sack
+*"Decent leather, simple make. It does the job, and that's enough."*
 
-"Fenroot Pack":
-  description: "It clinks, it drips, it stinks. But it carries. (40 slots, 20% weight reduction.)"
-  size: 8x5 #40
-  unique: none
-  appearance:
-    Sleepbag: hidden
-    BackpackStrapTop: hidden
-    BackpackFlap: hidden
-    Pot: hidden
-    Teapot: hidden
-    Knife: hidden
-    Pickaxe: hidden
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: visible
-    PouchFront: hidden
-    PouchLeft: hidden
-    BackpackBody: 578A3A
-  crafting:
-    station: Workbench
-    level: 1
-    costs:
-      ElderBark: 50
-      Chain: 2
-      Guck: 10
-      Root: 10
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x5
-  weight factor: 0.80
-  teleport: false
+**Stats:**
+- **Slots:** 16
+- **Weight Reduction:** 5%
 
-# ==================================================================================================
+**Crafting Requirements:**
+- Workbench (Level 2)
+- Deer Hide x25
 
-"Reinforced Fenroot Pack":
-  description: "A stiff, dependable pack — heavy on your back, but fearless in the mire. (48 slots, 15% weight reduction.)"
-  size: 8x6 #48
-  unique: none
-  appearance:
-    Sleepbag: hidden
-    BackpackStrapTop: hidden
-    BackpackFlap: hidden
-    Pot: hidden
-    Teapot: hidden
-    Knife: hidden
-    Pickaxe: hidden
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: visible
-    PouchFront: hidden
-    PouchLeft: hidden
-    BackpackBody: 578A3A
-  crafting:
-    station: Forge
-    level: 1
-    costs:
-      FenrootPack: 1
-      IronScrap: 20
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x6
-  weight factor: 0.85
-  teleport: false
+---
 
-# ==================================================================================================
+## Coin Pouch
+*"A simple leather pouch. Holds your coins and other small valuables."*
 
-"Serpenthide Bag":
-  description: "Scales and chitin make this bag almost as tough as the beasts it came from. (56 slots, 25% weight reduction.)"
-  size: 8x7 #56
-  unique: none
-  appearance:
-    Sleepbag: hidden
-    BackpackStrapTop: hidden
-    BackpackFlap: 578A3A
-    Pot: hidden
-    Teapot: hidden
-    Knife: E0D262
-    Pickaxe: hidden
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: hidden
-    PouchLeft: hidden
-    BackpackBody: 578A3A
-  crafting:
-    station: Workbench
-    level: 1
-    costs:
-      SerpentScale: 20
-      KnifeChitin: 1
-      Chitin: 10
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x7
-  weight factor: 0.75
-  teleport: false
+**Stats:**
+- **Slots:** 32
+- **Weight Reduction:** 20%
 
-# ==================================================================================================
+<details>
+<summary><b>Item Restrictions</b></summary>
 
-"Enchanted Serpenthide Bag":
-  description: "Bound by magic, this bag is lighter than it looks. (56 slots, 45% weight reduction.)"
-  size: 8x7 #56
-  unique: none
-  appearance:
-    Sleepbag: hidden
-    BackpackStrapTop: hidden
-    BackpackFlap: hidden
-    Pot: hidden
-    Teapot: hidden
-    Knife: E0D262
-    Pickaxe: hidden
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: hidden
-    PouchLeft: hidden
-    BackpackBody: 85B5A0
-  crafting:
-    station: Workbench
-    level: 1
-    costs:
-      SerpenthideBag: 1
-      DustEpic: 12
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x7
-  weight factor: 0.55
-  teleport: false
+- Coins
+- Ruby
+- Amber
+- Amber Pearl
+- Silver Necklace
 
-# ==================================================================================================
+</details>
 
-"Portable Refrigerator":
-  description: "Cold storage wherever you need it. (136 slots, 50% weight reduction. Can only hold food, mead, animal products (honey, eggs, and meat), crops, forage, butcher knife, and serving tray.)"
-  size: 8x17 #136
-  unique: none
-  appearance:
-    Sleepbag: hidden
-    BackpackStrapTop: hidden
-    BackpackFlap: 3E9BFF
-    Pot: visible
-    Teapot: visible
-    Knife: visible
-    Pickaxe: hidden
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: hidden
-    PouchLeft: hidden
-    BackpackBody: 3E9BFF
-  crafting:
-    station: Artisanstation
-    level: 1
-    costs:
-      WolfPelt: 30
-      Tin: 10
-      Silver: 20
-      FreezeGland: 12
-      KnifeSilver: 1
-      Blueberries: 20
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x17
-  valid items:
-    # Mead
-    - MeadFrostResist
-    - MeadHealthMinor
-    - MeadStaminaMinor
-    - MeadBaseHealthMinor
-    - MeadBaseFrostResist
-    - MeadBaseStaminaMinor
-    - MeadPoisonResist
-    - MeadBasePoisonResist
-    - MeadTasty
-    - MeadBaseTasty
-    - MeadHealthMedium
-    - MeadBaseHealthMedium
-    - MeadTrollPheromones
-    - MeadBzerker
-    - MeadBaseBzerker
-    - MeadSwimmer
-    - MeadBaseSwimmer
-    - MeadHasty
-    - MeadBaseHasty
-    - MeadStrength
-    - MeadBaseStrength
-    - BarleyWine
-    - BarleyWineBase
-    - MeadStaminaMedium
-    - MeadBaseStaminaMedium
-    - MeadBugRepellent
-    - MeadBaseBugRepellent
-    - MeadHealthMajor
-    - MeadBaseHealthMajor
-    - MeadStaminaLingering
-    - MeadBaseStaminaLingering
-    - MeadEitrMinor
-    - MeadBaseEitrMinor
-    - MeadHealthLingering
-    - MeadBaseHealthLingering
-    - MeadEitrLingering
-    - MeadBaseEitrLingering
-    - NeckTailGrilled
-    - CookedMeat
-    - CookedDeerMeat
-    - BoarJerky
-    - CookedBjornMeat
-    - MinceMeatSauce
-    - QueensJam
-    - CarrotSoup
-    - DeerStew
-    - FishCooked
-    - SerpentMeatCooked
-    - SerpentStew
-    - Pukeberries
-    - ShocklateSmoothie
-    - TurnipStew
-    - Sausages
-    - BlackSoup
-    - FeastMeadows_Material
-    - FeastBlackforest_Material
-    - FeastSwamps_Material
-    - FeastOceans_Material
-    - CookedWolfMeat
-    - WolfJerky
-    - OnionSoup
-    - WolfMeatSkewer
-    - Eyescream
-    - FeastMountains_Material
-    - FishWraps
-    - CookedLoxMeat
-    - LoxPie
-    - BloodPudding
-    - Bread
-    - FeastPlains_Material
-    - CookedEgg
-    - CookedBugMeat
-    - CookedHareMeat
-    - CookedChickenMeat
-    - MeatPlatter
-    - HoneyGlazedChicken
-    - MisthareSupreme
-    - Salad
-    - RoyalJelly
-    - MushroomOmelette
-    - FishAndBread
-    - MagicallyStuffedShroom
-    - YggdrasilPorridge
-    - SeekerAspic
-    - FeastMistlands_Material
-    - CookedAsksvinMeat
-    - RottenMeat
-    - CookedVoltureMeat
-    - CookedBoneMawSerpentMeat
-    - FierySvinstew
-    - MashedMeat
-    - PiquantPie
-    - SpicyMarmalade
-    - ScorchingMedley
-    - RoastedCrustPie
-    - SizzlingBerryBroth
-    - SparklingShroomshake
-    - MarinatedGreens
-    - FeastAshlands_Material
-    # Crops and Forage
-    - Raspberry
-    - Dandelion
-    - Thistle
-    - Blueberries
-    - Mushroom
-    - MushroomYellow
-    - MushroomBzerker
-    - Cloudberry
-    - MushroomMagecap
-    - MushroomJotunPuffs
-    - MushroomSmokePuff
-    - Fiddleheadfern
-    - Vineberry
-    # Animal Products
-    - DeerMeat
-    - RawMeat
-    - NeckTail
-    - FishRaw
-    - BjornMeat
-    - SerpentMeat
-    - WolfMeat
-    - LoxMeat
-    - ChickenMeat
-    - BugMeat
-    - ChickenEgg
-    - HareMeat
-    - VoltureMeat
-    - AsksvinMeat
-    - BoneMawSerpentMeat
-    - VoltureEgg
-    - AsksvinEgg
-    - Honey
-    # Misc
-    - Feaster
-    - KnifeButcher
-  weight factor: 0.50
-  teleport: false
+**Crafting Requirements:**
+- Workbench (Level 2)
+- Leather Scraps x6
 
-# ==================================================================================================
+---
 
-"Wolf Pelt Pack":
-  description: "Thick pelts stitched tight, perfect for carrying gear through snow and ice. (72 slots, 30% weight reduction.)"
-  size: 8x9 #72
-  unique: none
-  appearance:
-    Sleepbag: 595151
-    BackpackStrapTop: 595151
-    BackpackFlap: hidden
-    Pot: visible
-    Teapot: hidden
-    Knife: visible
-    Pickaxe: hidden
-    Knifesheath: visible
-    ToolstrapBottom: visible
-    MetalclipLeft: hidden
-    PouchFront: 595151
-    PouchLeft: 595151
-    BackpackBody: 595151
-  crafting:
-    station: Workbench
-    level: 1
-    costs:
-      WolfPelt: 25
-      KnifeSilver: 1
-      Tin: 4
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x9
-  weight factor: 0.70
-  teleport: false
+## 🌲 FOREST-TIER BAGS
 
-# ==================================================================================================
+---
 
-"Red Jute Backpack":
-  description: "Tough red jute stitched tight, with a warm wolf fur interior. (80 slots, 45% weight reduction.)"
-  size: 8x10 #80
-  unique: none
-  appearance:
-    Sleepbag: B51919
-    BackpackStrapTop: B51919
-    BackpackFlap: B51919
-    Pot: hidden
-    Teapot: hidden
-    Knife: hidden
-    Pickaxe: 808285
-    Knifesheath: hidden
-    ToolstrapBottom: visible
-    MetalclipLeft: hidden
-    PouchFront: B51919
-    PouchLeft: B51919
-    BackpackBody: B51919
-  crafting:
-    station: Workbench
-    level: 1
-    costs:
-      JuteRed: 20
-      PickaxeIron: 1
-      WolfPelt: 10
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x10
-  weight factor: 0.65
-  teleport: false
+## Troll Hide Satchel
+*"Built from troll hide — ugly as sin, but it'll outlast you."*
 
-# ==================================================================================================
+**Stats:**
+- **Slots:** 24
+- **Weight Reduction:** 20%
 
-"Merchant Lord's Valise":
-  description: "Exquisitely made from the finest hides, trimmed with silver thread, and studded with rubies. A pack built for both profit and prestige. (128 slots, 60% weight reduction. Can only hold coins, valuables (ruby etc), and items bought from the three traders.)"
-  size: 8x16 #128
-  unique: none
-  appearance:
-    Sleepbag: hidden
-    BackpackStrapTop: hidden
-    BackpackFlap: hidden
-    Pot: hidden
-    Teapot: hidden
-    Knife: hidden
-    Pickaxe: hidden
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: hidden
-    PouchLeft: hidden
-    BackpackBody: hidden
-  crafting:
-    station: Artisanstation
-    level: 1
-    costs:
-      LoxPelt: 30
-      LinenThread: 20
-      Silver: 20
-      Ruby: 10
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x16
-  valid items:
-    # Currency + Treasure
-    - Coins
-    - Ruby
-    - Amber
-    - AmberPearl
-    - SilverNecklace
-    # Hildir
-    - ArmorDress10
-    - ArmorTunic10
-    - HelmetHat5
-    - HelmetHat10
-    - HelmetSweatBand
-    - Sparkler
-    - BarberKit
-    - ArmorDress1
-    - ArmorDress4
-    - ArmorDress7
-    - ArmorTunic1
-    - ArmorTunic4
-    - ArmorTunic7
-    - HelmetHat3
-    - HelmetHat1
-    - HelmetHat6
-    - HelmetHat4
-    - HelmetHat2
-    - ArmorTunic8
-    - ArmorTunic5
-    - ArmorTunic2
-    - ArmorDress8
-    - ArmorDress5
-    - ArmorDress3
-    - ArmorDress6
-    - ArmorDress9
-    - ArmorTunic3
-    - ArmorTunic6
-    - ArmorTunic9
-    - HelmetHat7
-    - ArmorHarvester1
-    - ArmorHarvester2
-    - HelmetStrawHat
-    - FireworksRocket_White
-    - FireworksRocket_Red
-    - FireworksRocket_Yellow
-    - FireworksRocket_Green
-    - FireworksRocket_Blue
-    - FireworksRocket_Cyan
-    - FireworksRocket_Purple
-    - Ironpit
-    - chest_hildir1
-    - chest_hildir2
-    - chest_hildir3
-    # Haldor
-    - HelmetYule
-    - HelmetDverger
-    - BeltStrength
-    - YmirRemains
-    - FishingRod
-    - FishingBait
-    - Thunderstone
-    - ChickenEgg
-    - BarrelRings
-    # Bog Witch
-    - CandleWick
-    - Feaster
-    - ScytheHandle
-    - MeadTrollPheromones
-    - MushroomBzerker
-    - CuredSquirrelHamstring
-    - PowderedDragonEgg
-    - VineGreenSeeds
-    - PungentPebbles
-    - FragrantBundle
-    - FreshSeaweed
-    - BlobVial
-    - SpiceForests
-    - SpiceOceans
-    - SpiceMountains
-    - SpicePlains
-    - SpiceMistlands
-    - SpiceAshlands
-    # Epic Loot
-    - Andvaranaut
-    - ForestToken
-    - IronBountyToken
-    - GoldBountyToken
-    # Epic Loot Reagents
-    - RunestoneMagic
-    - RunestoneRare
-    - RunestoneEpic
-    - RunestoneLegendary
-    - RunestoneMythic
-    - ShardMagic
-    - ShardRare
-    - ShardEpic
-    - ShardLegendary
-    - ShardMythic
-    - DustMagic
-    - DustRare
-    - DustEpic
-    - DustLegendary
-    - DustMythic
-    - ReagentMagic
-    - ReagentRare
-    - ReagentEpic
-    - ReagentLegendary
-    - ReagentMythic
-    - EssenceMagic
-    - EssenceRare
-    - EssenceEpic
-    - EssenceLegendary
-    - EssenceMythic
-  weight factor: 0.40
-  teleport: false
+**Crafting Requirements:**
+- Workbench (Level 3)
+- Troll Hide x20
 
-# ==================================================================================================
+---
 
-"Lox Saddlebags":
-  description: "Thick Lox hides form these sturdy bags, secured to a wood frame via iron nails. (88 slots, 40% weight reduction.)"
-  size: 8x11 #88
-  unique: none
-  appearance:
-    Sleepbag: hidden
-    BackpackStrapTop: hidden
-    BackpackFlap: hidden
-    Pot: hidden
-    Teapot: hidden
-    Knife: hidden
-    Pickaxe: hidden
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: hidden
-    PouchLeft: hidden
-    BackpackBody: hidden
-  crafting:
-    station: Artisanstation
-    level: 1
-    costs:
-      LoxPelt: 40
-      IronNails: 40
-      FineWood: 40
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x11
-  weight factor: 0.60
-  teleport: false
+## Hunter's Rucksack
+*"Strong, stubborn, and heavy — just like the creature it came from."*
 
-# ==================================================================================================
+**Stats:**
+- **Slots:** 32
+- **Weight Reduction:** 10%
 
-"Yellow Linen Bag":
-  description: "A bag fashioned from an old cloak. The seams are neat and sturdy. (96 slots, 45% weight reduction.)"
-  size: 8x12 #96
-  unique: none
-  appearance:
-    Sleepbag: hidden
-    BackpackStrapTop: hidden
-    BackpackFlap: 8CBA42
-    Pot: hidden
-    Teapot: hidden
-    Knife: hidden
-    Pickaxe: hidden
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: hidden
-    PouchLeft: hidden
-    BackpackBody: 8CBA42
-  crafting:
-    station: Workbench
-    level: 1
-    costs:
-      CapeLinen: 1
-      LinenThread: 15
-      Cloudberry: 50
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x12
-  weight factor: 0.55
-  teleport: false
+**Crafting Requirements:**
+- Workbench (Level 4)
+- Bear Hide x20
+- Butcher Knife x1
 
-# ==================================================================================================
+---
 
-"Veilscale Pack":
-  description: "A sturdy traveler's pack made from the curious scaled hides of Mistlands hares. The frame is constructed from young branches of the world tree. (104 slots, 50% weight reduction.)"
-  size: 8x13 #104
-  unique: none
-  appearance:
-    Sleepbag: 434132
-    BackpackStrapTop: 434132
-    BackpackFlap: 434132
-    Pot: hidden
-    Teapot: hidden
-    Knife: hidden
-    Pickaxe: hidden
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: 434132
-    PouchLeft: 434132
-    BackpackBody: 434132
-  crafting:
-    station: Workbench
-    level: 1
-    costs:
-      ScaleHide: 40
-      YggdrasilWood: 30
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x13
-  weight factor: 0.50
-  teleport: false
+## Enchanted Hunter's Rucksack
+*"Sprinkled with magical dust, this rucksack feels surprisingly light, even while full."*
 
-# ==================================================================================================
-  
-"Eitrweave Bag":
-  description: "The strange fibers hum faintly with power, making the load within feel almost weightless. (104 slots, 70% weight reduction.)"
-  size: 8x13 #104
-  unique: none
-  appearance:
-    Sleepbag: hidden
-    BackpackStrapTop: hidden
-    BackpackFlap: 36FF75
-    Pot: hidden
-    Teapot: hidden
-    Knife: hidden
-    Pickaxe: 006319
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: 36FF75
-    PouchLeft: 36FF75
-    BackpackBody: 36FF75
-  crafting:
-    station: Magetable
-    level: 1
-    costs:
-      LinenThread: 40
-      Eitr: 20
-      PickaxeBlackMetal: 1
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x13
-  weight factor: 0.30
-  teleport: false
+**Stats:**
+- **Slots:** 32
+- **Weight Reduction:** 30%
 
-# ==================================================================================================
+**Crafting Requirements:**
+- Workbench (Level 4)
+- Hunter's Rucksack x1
+- Dust (Rare) x12
 
-"Imbued Eitrweave Bag":
-  description: "The dark energy of several black cores hum within, expanding space without burden. (112 slots, 70% weight reduction.)"
-  size: 8x14 #112
-  unique: none
-  appearance:
-    Sleepbag: hidden
-    BackpackStrapTop: hidden
-    BackpackFlap: 36FF75
-    Pot: hidden
-    Teapot: hidden
-    Knife: hidden
-    Pickaxe: 006319
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: 36FF75
-    PouchLeft: 36FF75
-    BackpackBody: 36FF75
-  crafting:
-    station: Magetable
-    level: 1
-    costs:
-      EitrweaveBag: 1
-      BlackCore: 2
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x14
-  weight factor: 0.30
-  teleport: false
-  
-# ==================================================================================================
+**Note:** *Requires Epic Loot mod*
 
-"Primal Hide Pack":
-  description: "A superb pack formed using Asksvin hide, stitched with Morgen sinew, framed by Bonemaw teeth, and secured via flametal buckles. (120 slots, 55% weight reduction.)"
-  size: 8x15 #120
-  unique: none
-  appearance:
-    Sleepbag: 8BA56A
-    BackpackStrapTop: 8BA56A
-    BackpackFlap: 8BA56A
-    Pot: hidden
-    Teapot: hidden
-    Knife: hidden
-    Pickaxe: hidden
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: 8BA56A
-    PouchLeft: 8BA56A
-    BackpackBody: 8BA56A
-  crafting:
-    station: Blackforge
-    level: 1
-    costs:
-      AskHide: 30
-      MorgenSinew: 10
-      BonemawSerpentTooth: 20
-      FlametalNew: 10
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x15
-  weight factor: 0.45
-  teleport: false
-  
-# ==================================================================================================
+---
 
+## Tackle Box
+*"Everything a fisherman needs, all in one place."*
 
-"Imbued Primal Hide Pack":
-  description: "Molten energy flows through the hide and sinew, subtly shifting the bag's form to hold more than seems possible. (128 slots, 55% weight reduction.)"
-  size: 8x16 #128
-  unique: none
-  appearance:
-    Sleepbag: 8BA56A
-    BackpackStrapTop: 8BA56A
-    BackpackFlap: 8BA56A
-    Pot: hidden
-    Teapot: hidden
-    Knife: hidden
-    Pickaxe: hidden
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: 8BA56A
-    PouchLeft: 8BA56A
-    BackpackBody: 8BA56A
-  crafting:
-    station: Magetable
-    level: 1
-    costs:
-      PrimalHidePack: 1
-      MoltenCore: 10
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x16
-  weight factor: 0.45
-  teleport: false
+**Stats:**
+- **Slots:** 80
+- **Weight Reduction:** 40%
 
-  # ==================================================================================================
+<details>
+<summary><b>Item Restrictions</b></summary>
 
-"Satchel of the Void":
-  description: "Threads of eitr, fire, and shadow weave together where no light should be. The Fader’s essence stirs beneath its surface — patient, endless, and dreaming of the void between stars. (160 slots, 80% weight reduction.)"
-  size: 8x20 #160
-  unique: none
-  appearance:
-    Sleepbag: hidden
-    BackpackStrapTop: hidden
-    BackpackFlap: 000000
-    Pot: hidden
-    Teapot: hidden
-    Knife: hidden
-    Pickaxe: hidden
-    Knifesheath: hidden
-    ToolstrapBottom: hidden
-    MetalclipLeft: hidden
-    PouchFront: hidden
-    PouchLeft: hidden
-    BackpackBody: 000000
-  crafting:
-    station: Magetable
-    level: 1
-    costs:
-      MoltenCore: 10
-      BlackCore: 10
-      FaderDrop: 5
-      Eitr: 50
-      CelestialFeather: 20
-      GemstoneBlue: 1
-      GemstoneRed: 1
-      GemstoneGreen: 1
-  upgrade:
-    1:
-      LeatherScraps: 1
-      size: 8x20
-  weight factor: 0.20
-  teleport: false
+- Fishing Rod
+- Fishing Bait (All Types)
+- Chitin Spear
+- Fishing Hat
+- All Fish
+- Raw Fish
+- Stamina Foods
+
+</details>
+
+**Crafting Requirements:**
+- Forge (Level 3)
+- Bronze x5
+- Deer Hide x2
+- Resin x20
+
+---
+
+## 💀 SWAMP-TIER BAG
+
+---
+
+## Fenroot Pack
+*"It clinks, it drips, it stinks. But it carries."*
+
+**Stats:**
+- **Slots:** 40
+- **Weight Reduction:** 20%
+
+**Crafting Requirements:**
+- Workbench (Level 4)
+- Ancient Bark x50
+- Chain x2
+- Guck x10
+- Root x10
+
+---
+
+## Reinforced Fenroot Pack
+*"A stiff, dependable pack — heavy on your back, but fearless in the mire."*
+
+**Stats:**
+- **Slots:** 48
+- **Weight Reduction:** 15%
+
+**Crafting Requirements:**
+- Forge (Level 7)
+- Fenroot Pack x1
+- Iron Scrap x20
+
+---
+
+## Serpenthide Bag
+*"Scales and chitin make this bag almost as tough as the beasts it came from."*
+
+**Stats:**
+- **Slots:** 56
+- **Weight Reduction:** 25%
+
+**Crafting Requirements:**
+- Workbench (Level 4)
+- Serpent Scale x20
+- Chitin Knife x1
+- Chitin x10
+
+---
+
+## Enchanted Serpenthide Bag
+*"Bound by magic, this bag is lighter than it looks."*
+
+**Stats:**
+- **Slots:** 56
+- **Weight Reduction:** 45%
+
+**Crafting Requirements:**
+- Workbench (Level 4)
+- Serpenthide Bag x1
+- Dust (Epic) x12
+
+**Note:** *Requires Epic Loot mod*
+
+---
+
+## 🏔️ MOUNTAIN-TIER BAGS
+
+---
+
+## Portable Refrigerator
+*"Cold storage wherever you need it."*
+
+**Stats:**
+- **Slots:** 136
+- **Weight Reduction:** 25%
+
+<details>
+<summary><b>Item Restrictions</b></summary>
+
+- All Mead & Bases
+- Raw and Cooked Meats
+- Honey, Royal Jelly, Eggs
+- All Berries & Mushrooms
+- All Crops
+- All Foods
+
+</details>
+
+**Crafting Requirements:**
+- Artisan Table (Level 1)
+- Wolf Pelt x30
+- Tin x10
+- Silver x20
+- Freeze Gland x12
+- Silver Knife x1
+- Blueberries x20
+
+---
+
+## Wolf Pelt Pack
+*"Thick pelts stitched tight, perfect for carrying gear through snow and ice."*
+
+**Stats:**
+- **Slots:** 72
+- **Weight Reduction:** 30%
+
+**Crafting Requirements:**
+- Workbench (Level 5)
+- Wolf Pelt x25
+- Silver Knife x1
+- Tin x4
+
+---
+
+## Red Jute Backpack
+*"Tough red jute stitched tight, with a warm wolf fur interior."*
+
+**Stats:**
+- **Slots:** 80
+- **Weight Reduction:** 35%
+
+**Crafting Requirements:**
+- Workbench (Level 5)
+- Red Jute x20
+- Iron Pickaxe x1
+- Wolf Pelt x10
+
+---
+
+## 🌾 PLAINS-TIER BAGS
+
+---
+
+## Merchant Lord's Valise
+*"Exquisitely made from the finest hides, trimmed with silver thread, and studded with rubies. A pack built for both profit and prestige."*
+
+**Stats:**
+- **Slots:** 128
+- **Weight Reduction:** 60%
+
+<details>
+<summary><b>Item Restrictions</b></summary>
+
+- Coins
+- Ruby
+- Amber
+- Amber Pearl
+- Silver Necklace
+- Hildir Items (Various Cosmetics and Decorations)
+- Haldor Items (Merchant Goods)
+- Bog Witch Items (Magical Components)
+- Epic Loot Items (Tokens, Reagents, Essences, Dusts, Shards, Runestones)
+
+</details>
+
+**Crafting Requirements:**
+- Artisan Table (Level 1)
+- Lox Pelt x30
+- Linen Thread x20
+- Silver x20
+- Ruby x10
+
+---
+
+## Lox Saddlebags
+*"Thick Lox hides form these sturdy bags, secured to a wood frame via iron nails."*
+
+**Stats:**
+- **Slots:** 88
+- **Weight Reduction:** 40%
+
+**Crafting Requirements:**
+- Lox Pelt x40
+- Iron Nails x40
+- Fine Wood x40
+
+---
+
+## Yellow Linen Bag
+*"A simple bag fashioned from an old cloak. The seams are neat and sturdy."*
+
+**Stats:**
+- **Slots:** 96
+- **Weight Reduction:** 45%
+
+**Crafting Requirements:**
+- Workbench (Level 5)
+- Linen Cape x1
+- Linen Thread x15
+
+---
+
+## 🪰 MISTLANDS-TIER BAGS
+
+---
+
+## Veilscale Pack
+*"A sturdy traveler's pack made from the curious scaled hides of Mistlands hares. The frame is constructed from young branches of the world tree."*
+
+**Stats:**
+- **Slots:** 104
+- **Weight Reduction:** 50%
+
+**Crafting Requirements:**
+- Workbench (Level 5)
+- Scale Hide x40
+- Yggdrasil Wood x30
+
+---
+
+## Eitrweave Bag
+*"The strange fibers hum faintly with power, making the load within feel almost weightless."*
+
+**Stats:**
+- **Slots:** 104
+- **Weight Reduction:** 70%
+
+**Crafting Requirements:**
+- Galdr Table (Level 3)
+- Linen Thread x40
+- Eitr x20
+- Black Metal Pickaxe x1
+
+---
+
+## Imbued Eitrweave Bag
+*"The dark energy of several black cores hum within, expanding space without burden."*
+
+**Stats:**
+- **Slots:** 112
+- **Weight Reduction:** 70%
+
+**Crafting Requirements:**
+- Galdr Table (Level 3)
+- Eitrweave Bag x1
+- Black Core x2
+
+---
+
+## 🔥 ASHLANDS-TIER BAGS
+
+---
+
+## Chest of the Master Angler
+*"Made of beautiful blackened wood, its seams sealed with charred resin. A finely crafted flametal lock keeps your fishing supplies safe."*
+
+**Stats:**
+- **Slots:** 80
+- **Weight Reduction:** 40%
+
+<details>
+<summary><b>Item Restrictions</b></summary>
+
+- Fishing Rod
+- Fishing Bait (All Types)
+- Chitin Spear
+- Fishing Hat
+- All Fish
+- Raw Fish
+- Stamina Foods
+</details>
+
+**Crafting Requirements:**
+- Black Forge (Level 4)
+- Flametal x2
+- Charcoal Resin x30
+- Ashwood x50
+
+---
+
+## Enchanted Chest of the Master Angler
+
+*"Bound with ancient runes, this tackle box never grows heavy, no matter how full its compartments become."*
+
+**Stats:**
+- **Slots:** 80
+- **Weight Reduction:** 40%
+
+<details>
+<summary><b>Item Restrictions</b></summary>
+
+- Fishing Rod
+- Fishing Bait (All Types)
+- Chitin Spear
+- Fishing Hat
+- All Fish
+- Raw Fish
+- Stamina Foods
+</details>
+
+**Crafting Requirements:**
+- Galdr Table (Level 3)
+- Flametal x2
+- Charcoal Resin x30
+- Ashwood x50
+--- 
+
+## Primal Hide Pack
+*"A superb pack formed using Asksvin hide, stitched with Morgen sinew, framed by Bonemaw teeth, and secured via flametal buckles."*
+
+**Stats:**
+- **Slots:** 120
+- **Weight Reduction:** 55%
+
+**Crafting Requirements:**
+- Black Forge (Level 4)
+- Asksvin Hide x30
+- Morgen Sinew x10
+- Bonemaw Tooth x20
+- Flametal x10
+
+---
+
+## Imbued Primal Hide Pack
+*"Molten energy flows through the hide and sinew, subtly shifting the bag's form to hold more than seems possible."*
+
+**Stats:**
+- **Slots:** 128
+- **Weight Reduction:** 55%
+
+**Crafting Requirements:**
+- Galdr Table (Level 3)
+- Primal Hide Pack x1
+- Molten Core x10
+
+---
+
+## Satchel of the Void
+*"Molten energy flows through the hide and sinew, subtly shifting the bag's form to hold more than seems possible."*
+
+**Stats:**
+- **Slots:** 160
+- **Weight Reduction:** 80%
+
+**Crafting Requirements:**
+- Galdr Table (Level 4)
+- Molten Core x10
+- Black Core x10
+- Fader Drop x5
+- Refined Eitr x50
+- Celestial Feather x20
+- Iolite x1
+- Bloodstone x1
+- Jade x1
