@@ -63,7 +63,7 @@
 # ==================================================================================================
 
 "Coin Pouch":
-  description: "A simple leather pouch. Holds your coins and other small valuables. (32 slots, 20% weight reduction. Can only hold coins and valuables (rubies etc).)"
+  description: "A simple leather pouch. Holds your coins and other small valuables. (32 slots, 20% weight reduction. Can only hold coins and valuables (rubies, etc).)"
   size: 8x4 #32
   unique: none
   appearance:
