@@ -1,6 +1,0 @@
-UniqueID: Chop1Trees1
-Name: '[Chop] Trees x50'
-Icon: log
-Requirement:
-  Type: TreesChopped
-  Threshold: 50
