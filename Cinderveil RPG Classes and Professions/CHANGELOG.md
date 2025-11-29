@@ -2,7 +2,7 @@
 ---
 
 
-### Version 1.0.2
+### Version 1.1.0
 - Changed [Class] Paladin and [Class] Assasin level 1 requirements (While playing I didn't get GreylingElite or GreylingBeeKeeper spawns, so I removed requirements for those.)
 - Bug fix for [Class] Conjurer buffs for levels 2, 3, & 4 (ID and name were wrong numbers)
 - Changed [Pick] Surtling Core from x30 to x50 and fixed the name (said x100 which was wrong)
@@ -24,7 +24,13 @@
 - Bug fix for [Class] Conjurer [Level 6] and [Class] Conjurer [Level 6] (Had wrong achivement requirement name)
 - Changed [Class] Stalker requirements for all levels. Now requires completing any 4 kill achivements.
 - Removed collecting magic weapons requirement from Druid.
-
+- Changed display name to [Collect] One-Handed Swords [1] (basically added a space and dash to make it look nicer)
+- Fixed unique ID for [Kill] Lord Reto x1 (was Kill1LordReto, is not properly fixed to Kill7LordReto.) [Class] Paladin [Level 7] achivement should now work properly.
+- Bug fix for [Collect] One-Handed Swords [4] (Ternary Silver Sword ID was wrong)
+- Increased number of kills required for several kill achivements. Volture, Charred Warrior, Charred Twitcher, Charred Marksman, Seeker, Hare, Tick, Lox, Fuling, Wolf, Ulv, Drake, Draugr, Skeleton, Greydwarf, Crow, Greyling, Deer.
+- Increased [Pick] Straw x200 threshold to x300.
+- Bug fix for [Class] Paladin [Level 7] achivement requirements (wrong ID for the creatures to kill achivements)
+- Added Lox Rider Armor set options to [Collect] Heavy Armor [4] achivement.
 
 ---
 
