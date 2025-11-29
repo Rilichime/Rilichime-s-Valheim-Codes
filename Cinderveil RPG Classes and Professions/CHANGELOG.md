@@ -31,6 +31,7 @@
 - Increased [Pick] Straw x200 threshold to x300.
 - Bug fix for [Class] Paladin [Level 7] achivement requirements (wrong ID for the creatures to kill achivements)
 - Added Lox Rider Armor set options to [Collect] Heavy Armor [4] achivement.
+- Bug fix for [Collect] Trophies [4]. Fenring Trophy was x5, should be x1.
 
 ---
 
